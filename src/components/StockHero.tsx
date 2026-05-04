@@ -30,7 +30,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
               transition={{ duration: 1, delay: 0.2 }}
               className="font-black tracking-tighter uppercase italic leading-[0.8] text-glow flex flex-col items-center"
             >
-              <span className="block text-[27.5px] sm:text-[39.5px] md:text-[87.5px] xl:text-[115.5px] text-text whitespace-normal md:whitespace-nowrap leading-none">WHOLESALE SUCCESS IN 2026.</span>
+              <span className="block text-[13.5px] sm:text-[25.5px] md:text-[73.5px] xl:text-[101.5px] text-text whitespace-normal md:whitespace-nowrap leading-none">WHOLESALE SUCCESS IN 2026.</span>
               <span className="block text-2xl sm:text-3xl md:text-6xl xl:text-[78px] text-primary mt-2">STARTS WITH SMARTER SYSTEMS.</span>
             </motion.h1>
           </div>
