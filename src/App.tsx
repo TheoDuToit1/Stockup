@@ -94,7 +94,7 @@ const ContactModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => voi
 
         {!submitted ? (
           <>
-            <h3 className="text-3xl font-black italic uppercase tracking-tighter mb-2 text-text">Book Talk</h3>
+            <h3 className="text-3xl font-black italic uppercase tracking-tighter mb-2 text-text">WhatsApp Chat</h3>
             <p className="text-text-secondary mb-6 text-sm font-medium italic">Let's talk about how STOCKUP can fix your inventory chaos.</p>
             <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}>
               <div>
@@ -132,6 +132,7 @@ export default function App() {
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+  const openWhatsApp = () => window.open('https://wa.me/27714329190', '_blank');
 
   return (
     <div className="min-h-screen selection:bg-primary/20 bg-bg text-text font-sans overflow-x-hidden">
@@ -149,10 +150,10 @@ export default function App() {
           </div>
           <div className="hidden lg:flex items-center gap-8">
             <span className="text-[10px] uppercase tracking-[0.3em] text-text-secondary font-black">South Africa • POPIA Compliant</span>
-            <Button onClick={openModal} variant="outline" className="h-10 py-0 px-6 text-xs transform hover:scale-105 shadow-sm">Request Pilot</Button>
-            <Button onClick={openModal} className="h-10 py-0 px-6 text-xs shadow-none transform hover:scale-105">Book Talk</Button>
+            <Button onClick={openWhatsApp} variant="outline" className="h-10 py-0 px-6 text-xs transform hover:scale-105 shadow-sm">Custom system options</Button>
+            <Button onClick={openWhatsApp} className="h-10 py-0 px-6 text-xs shadow-none transform hover:scale-105">WhatsApp Call</Button>
           </div>
-          <button onClick={openModal} className="lg:hidden text-text-secondary">
+          <button onClick={openWhatsApp} className="lg:hidden text-text-secondary">
             <Zap size={24} />
           </button>
         </div>
@@ -160,7 +161,7 @@ export default function App() {
 
       <main className="pt-20">
         {/* Replace old hero with new StockHero */}
-        <StockHero onContactClick={openModal} />
+        <StockHero onContactClick={openWhatsApp} />
 
         {/* Section: The Reality of Chaos */}
         <section id="how-it-works" className="py-24 md:py-64 relative overflow-hidden">
@@ -447,7 +448,7 @@ export default function App() {
                       <p className="text-lg text-text-secondary leading-relaxed font-medium italic">
                         We don't build "tech startup" apps. We build practical tools that respect real South African market realities—from data-sensitive users to cash-on-collection preferences. StockUp is built for the ground.
                       </p>
-                      <button onClick={openModal} className="group flex items-center gap-4 text-text font-black uppercase italic tracking-tighter text-xl outline-none glass-pill px-8 py-4 rounded-[9px]">
+                      <button onClick={openWhatsApp} className="group flex items-center gap-4 text-text font-black uppercase italic tracking-tighter text-xl outline-none glass-pill px-8 py-4 rounded-[9px]">
                          Explore the pilot program 
                          <div className="w-12 h-12 bg-primary rounded-[9px] flex items-center justify-center text-white group-hover:translate-x-2 transition-transform duration-300">
                             <ArrowRight size={24} />
@@ -532,10 +533,10 @@ export default function App() {
                 RECLAIM YOUR <br /><span className="text-primary underline decoration-white/10 underline-offset-[20px]">GROWTH ASSET.</span>
               </h2>
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center">
-                 <button onClick={openModal} className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 text-white rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl glass-pill active:scale-95 transition-all duration-300">
+                 <button onClick={openWhatsApp} className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 text-white rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl glass-pill active:scale-95 transition-all duration-300">
                    Start Pilot 2026
                  </button>
-                 <button onClick={openModal} className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 text-text rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl glass-pill active:scale-95 transition-all duration-300">
+                 <button onClick={openWhatsApp} className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 text-text rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl glass-pill active:scale-95 transition-all duration-300">
                    Get Pricing
                  </button>
               </div>
@@ -574,7 +575,7 @@ export default function App() {
       {/* FAB */}
       <div className="fixed bottom-8 right-8 z-50">
            <motion.button
-              onClick={openModal}
+              onClick={openWhatsApp}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="glass-pill text-white w-14 h-14 rounded-[9px] flex items-center justify-center cursor-pointer"

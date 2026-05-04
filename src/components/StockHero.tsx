@@ -54,7 +54,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
               onClick={onContactClick}
               className="group relative inline-flex items-center gap-3 px-10 py-5 text-white rounded-[9px] font-black text-lg uppercase italic tracking-tighter glass-pill active:scale-95 transition-all duration-300"
             >
-              <span className="relative z-10">Start 15-Min Talk</span>
+              <span className="relative z-10">Discuss YOUR CUSTOM BUILD</span>
               <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
             </button>
             
@@ -62,7 +62,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
               onClick={onContactClick}
               className="group relative inline-flex items-center gap-3 px-10 py-5 text-text rounded-[9px] font-black text-lg uppercase italic tracking-tighter glass-pill active:scale-95 transition-all duration-300"
             >
-              <span className="relative z-10">See Pilot Package</span>
+              <span className="relative z-10">Custom system Options</span>
             </button>
           </motion.div>
         </motion.div>

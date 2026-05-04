@@ -291,12 +291,22 @@ export function CinematicFooter() {
             <div ref={linksRef} className="flex flex-col items-center gap-6 w-full">
               {/* Main Links */}
               <div className="flex flex-wrap justify-center gap-4 w-full">
-                <MagneticButton className="glass-pill px-10 py-5 rounded-[9px] text-text font-bold text-sm md:text-base flex items-center gap-3 group">
-                  Book 15-Min Talk
+                <MagneticButton 
+                  as="a"
+                  href="https://wa.me/27714329190"
+                  target="_blank"
+                  className="glass-pill px-10 py-5 rounded-[9px] text-text font-bold text-sm md:text-base flex items-center gap-3 group"
+                >
+                  WhatsApp Call
                 </MagneticButton>
                 
-                <MagneticButton className="glass-pill px-10 py-5 rounded-[9px] text-text font-bold text-sm md:text-base flex items-center gap-3 group">
-                  Request Pilot
+                <MagneticButton 
+                  as="a"
+                  href="https://wa.me/27714329190"
+                  target="_blank"
+                  className="glass-pill px-10 py-5 rounded-[9px] text-text font-bold text-sm md:text-base flex items-center gap-3 group"
+                >
+                  Custom system options
                 </MagneticButton>
               </div>
 
@@ -308,7 +318,12 @@ export function CinematicFooter() {
                 <MagneticButton className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
                   Terms of Service
                 </MagneticButton>
-                <MagneticButton className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
+                <MagneticButton 
+                  as="a"
+                  href="https://wa.me/27714329190"
+                  target="_blank"
+                  className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text"
+                >
                   Direct Support
                 </MagneticButton>
               </div>
