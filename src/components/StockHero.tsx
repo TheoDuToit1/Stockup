@@ -101,7 +101,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
                { title: "Collection / Delivery", img: c7 },
                { title: "Customer Database", img: c8 },
              ].map((card, i) => (
-               <div key={i} className="aspect-[4/3] bg-card border border-white/5 rounded-2xl flex flex-col items-center justify-center shadow-sm relative group overflow-hidden px-2">
+               <div key={i} className={`aspect-[4/3] bg-card border border-white/5 rounded-2xl flex flex-col items-center shadow-sm relative group overflow-hidden px-2 ${i === 7 ? 'justify-center' : 'justify-end pb-3'}`}>
                   {card.img && (
                     <img
                       src={card.img}
