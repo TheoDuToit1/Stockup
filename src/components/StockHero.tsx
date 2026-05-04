@@ -4,15 +4,6 @@ import React from "react";
 import { motion } from "motion/react";
 import { ArrowRight, Package, Database } from "lucide-react";
 import { WhatsAppIcon } from "./ui/WhatsAppIcon";
-import backgroundImage from "../assets/background.jpeg";
-import box1Image from "../assets/box1.jpeg";
-import box2Image from "../assets/box2.jpeg";
-import box3Image from "../assets/box3.jpeg";
-import box4Image from "../assets/box4.jpeg";
-import box5Image from "../assets/box5.jpeg";
-import box6Image from "../assets/box6.jpeg";
-import box7Image from "../assets/box7.jpeg";
-import box8Image from "../assets/box8.jpeg";
 
 interface StockHeroProps {
   onContactClick: () => void;
@@ -22,7 +13,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
   return (
     <section className="relative pt-32 pb-48 overflow-hidden">
       <img
-        src={backgroundImage}
+        src="/background.jpeg"
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
@@ -88,14 +79,14 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
              {[
-               { title: "Daily Deals", img: box1Image },
-               { title: "Bulk Offers", img: box2Image },
-               { title: "Customer Basket", img: box3Image },
-               { title: "WhatsApp Order", img: box4Image },
-               { title: "Packing Slip", img: box5Image },
-               { title: "Payment Check", img: box6Image },
-               { title: "Collection / Delivery", img: box7Image },
-               { title: "Customer Database", img: box8Image },
+               { title: "Daily Deals", img: "/box1.jpeg" },
+               { title: "Bulk Offers", img: "/box2.jpeg" },
+               { title: "Customer Basket", img: "/box3.jpeg" },
+               { title: "WhatsApp Order", img: "/box4.jpeg" },
+               { title: "Packing Slip", img: "/box5.jpeg" },
+               { title: "Payment Check", img: "/box6.jpeg" },
+               { title: "Collection / Delivery", img: "/box7.jpeg" },
+               { title: "Customer Database", img: "/box8.jpeg" },
              ].map((card, i) => (
                <div key={i} className="aspect-[4/3] bg-card border border-white/5 rounded-2xl flex flex-col items-center justify-center shadow-sm relative group overflow-hidden px-2">
                   {card.img && (
