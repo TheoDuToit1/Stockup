@@ -2,9 +2,17 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { ArrowRight, Package, Database, Tag, Layers, ShoppingBasket, MessageCircle, FileText, CheckCircle, Truck } from "lucide-react";
+import { ArrowRight, Package, Database } from "lucide-react";
 import { WhatsAppIcon } from "./ui/WhatsAppIcon";
 import backgroundImage from "../assets/background.jpeg";
+import box1Image from "../assets/Box1.jpeg";
+import box2Image from "../assets/box2.jpeg";
+import box3Image from "../assets/box3.jpeg";
+import box4Image from "../assets/box4.jpeg";
+import box5Image from "../assets/box5.jpeg";
+import box6Image from "../assets/box6.jpeg";
+import box7Image from "../assets/box7.jpeg";
+import box8Image from "../assets/box8.jpeg";
 
 interface StockHeroProps {
   onContactClick: () => void;
@@ -79,21 +87,25 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
              {[
-               { title: "Daily Deals", icon: Tag, color: "text-primary", bg: "bg-primary/10 border border-primary/20" },
-               { title: "Bulk Offers", icon: Layers, color: "text-blue-400", bg: "bg-blue-500/10 border border-blue-500/20" },
-               { title: "Customer Basket", icon: ShoppingBasket, color: "text-primary", bg: "bg-primary/10 border border-primary/20" },
-               { title: "WhatsApp Order", icon: MessageCircle, color: "text-[#25D366]", bg: "bg-[#25D366]/10 border border-[#25D366]/20" },
-               { title: "Packing Slip", icon: FileText, color: "text-zinc-400", bg: "bg-white/5 border border-white/10" },
-               { title: "Payment Check", icon: CheckCircle, color: "text-primary", bg: "bg-primary/10 border border-primary/20" },
-               { title: "Collection / Delivery", icon: Truck, color: "text-blue-400", bg: "bg-blue-500/10 border border-blue-500/20" },
-               { title: "Customer Database", icon: Database, color: "text-primary", bg: "bg-primary/10 border border-primary/20" },
+               { title: "Daily Deals", img: box1Image },
+               { title: "Bulk Offers", img: box2Image },
+               { title: "Customer Basket", img: box3Image },
+               { title: "WhatsApp Order", img: box4Image },
+               { title: "Packing Slip", img: box5Image },
+               { title: "Payment Check", img: box6Image },
+               { title: "Collection / Delivery", img: box7Image },
+               { title: "Customer Database", img: box8Image },
              ].map((card, i) => (
-               <div key={i} className="aspect-[4/3] bg-card border border-white/5 rounded-2xl flex flex-col items-center justify-center shadow-sm relative group overflow-hidden gap-4 px-2">
-                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-500 ${card.bg} ${card.color} group-hover:scale-110 shadow-lg`}>
-                    <card.icon size={26} strokeWidth={1.5} />
-                  </div>
-                  <span className="text-[11px] md:text-[13px] font-black uppercase tracking-wider text-zinc-300 text-center leading-tight px-1">{card.title}</span>
-                  <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-300" />
+               <div key={i} className="aspect-[4/3] bg-card border border-white/5 rounded-2xl flex flex-col items-center justify-center shadow-sm relative group overflow-hidden px-2">
+                  {card.img && (
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-700 group-hover:scale-105" 
+                      style={{ backgroundImage: `url(${card.img})` }} 
+                    />
+                  )}
+                  {card.img && <div className="absolute inset-0 bg-black/50 z-0 transition-opacity duration-300 group-hover:bg-black/60" />}
+                  <span className="relative z-10 text-[11px] md:text-[13px] font-black uppercase tracking-wider text-white text-center leading-tight px-1 drop-shadow-md">{card.title}</span>
+                  <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-300 z-20 pointer-events-none" />
                </div>
              ))}
           </div>
