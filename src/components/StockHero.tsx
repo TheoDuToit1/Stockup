@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { ArrowRight, Package, Box, ShoppingCart, Database } from "lucide-react";
+import { ArrowRight, Package, Database, Tag, Layers, ShoppingBasket, MessageCircle, FileText, CheckCircle, Truck } from "lucide-react";
 import { WhatsAppIcon } from "./ui/WhatsAppIcon";
 import backgroundImage from "../assets/background.jpeg";
 
@@ -43,7 +43,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-[18.5px] md:text-[22.5px] text-text-secondary max-w-4xl mx-auto leading-snug font-medium italic"
           >
-            Know your customers. Promote daily deals. Give buyers more reason to stock up.
+            Every special becomes a smarter order. Every order grows your customer database.
           </motion.p>
 
           <motion.div
@@ -77,13 +77,23 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
           transition={{ duration: 1, delay: 1 }}
           className="mt-28 relative max-w-5xl mx-auto"
         >
-          <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
-             {[...Array(16)].map((_, i) => (
-               <div key={i} className="aspect-square bg-card border border-white/5 rounded-2xl flex items-center justify-center shadow-sm relative group overflow-hidden">
-                  <div className={`w-3/4 h-3/4 rounded-xl flex items-center justify-center transition-all duration-500 ${i % 3 === 0 ? 'bg-primary/5 text-primary' : 'bg-white/5 text-zinc-600'}`}>
-                    {i % 4 === 0 ? <Package size={24} /> : i % 4 === 1 ? <Box size={24} /> : i % 4 === 2 ? <ShoppingCart size={24} /> : <Database size={24} />}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+             {[
+               { title: "Daily Deals", icon: Tag, color: "text-primary", bg: "bg-primary/10 border border-primary/20" },
+               { title: "Bulk Offers", icon: Layers, color: "text-blue-400", bg: "bg-blue-500/10 border border-blue-500/20" },
+               { title: "Customer Basket", icon: ShoppingBasket, color: "text-primary", bg: "bg-primary/10 border border-primary/20" },
+               { title: "WhatsApp Order", icon: MessageCircle, color: "text-[#25D366]", bg: "bg-[#25D366]/10 border border-[#25D366]/20" },
+               { title: "Packing Slip", icon: FileText, color: "text-zinc-400", bg: "bg-white/5 border border-white/10" },
+               { title: "Payment Check", icon: CheckCircle, color: "text-primary", bg: "bg-primary/10 border border-primary/20" },
+               { title: "Collection / Delivery", icon: Truck, color: "text-blue-400", bg: "bg-blue-500/10 border border-blue-500/20" },
+               { title: "Customer Database", icon: Database, color: "text-primary", bg: "bg-primary/10 border border-primary/20" },
+             ].map((card, i) => (
+               <div key={i} className="aspect-[4/3] bg-card border border-white/5 rounded-2xl flex flex-col items-center justify-center shadow-sm relative group overflow-hidden gap-4 px-2">
+                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-500 ${card.bg} ${card.color} group-hover:scale-110 shadow-lg`}>
+                    <card.icon size={26} strokeWidth={1.5} />
                   </div>
-                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors" />
+                  <span className="text-[11px] md:text-[13px] font-black uppercase tracking-wider text-zinc-300 text-center leading-tight px-1">{card.title}</span>
+                  <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-300" />
                </div>
              ))}
           </div>
