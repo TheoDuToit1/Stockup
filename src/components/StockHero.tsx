@@ -5,6 +5,16 @@ import { motion } from "motion/react";
 import { ArrowRight, Package, Database } from "lucide-react";
 import { WhatsAppIcon } from "./ui/WhatsAppIcon";
 
+import hbg from "../assets/hbg.jpeg";
+import c1 from "../assets/c1.jpeg";
+import c2 from "../assets/c2.jpeg";
+import c3 from "../assets/c3.jpeg";
+import c4 from "../assets/c4.jpeg";
+import c5 from "../assets/c5.jpeg";
+import c6 from "../assets/c6.jpeg";
+import c7 from "../assets/c7.jpeg";
+import c8 from "../assets/c8.jpeg";
+
 interface StockHeroProps {
   onContactClick: () => void;
 }
@@ -13,7 +23,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
   return (
     <section className="relative pt-32 pb-48 overflow-hidden">
       <img
-        src="/hbg.jpeg"
+        src={hbg}
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover z-0"
         onError={(e) => console.error("Failed to load hero background image:", e.currentTarget.src)}
@@ -80,14 +90,14 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
              {[
-               { title: "Daily Deals", img: "/c1.jpeg" },
-               { title: "Bulk Offers", img: "/c2.jpeg" },
-               { title: "Customer Basket", img: "/c3.jpeg" },
-               { title: "WhatsApp Order", img: "/c4.jpeg" },
-               { title: "Packing Slip", img: "/c5.jpeg" },
-               { title: "Payment Check", img: "/c6.jpeg" },
-               { title: "Collection / Delivery", img: "/c7.jpeg" },
-               { title: "Customer Database", img: "/c8.jpeg" },
+               { title: "Daily Deals", img: c1 },
+               { title: "Bulk Offers", img: c2 },
+               { title: "Customer Basket", img: c3 },
+               { title: "WhatsApp Order", img: c4 },
+               { title: "Packing Slip", img: c5 },
+               { title: "Payment Check", img: c6 },
+               { title: "Collection / Delivery", img: c7 },
+               { title: "Customer Database", img: c8 },
              ].map((card, i) => (
                <div key={i} className="aspect-[4/3] bg-card border border-white/5 rounded-2xl flex flex-col items-center justify-center shadow-sm relative group overflow-hidden px-2">
                   {card.img && (
