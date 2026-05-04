@@ -23,14 +23,14 @@ interface StockHeroProps {
 
 export default function StockHero({ onContactClick }: StockHeroProps) {
   return (
-    <section className="relative pt-32 pb-48 overflow-hidden">
+    <section className="relative pt-48 pb-24 overflow-hidden">
       <img
         src={hbg}
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover z-0"
         onError={(e) => console.error("Failed to load hero background image:", e.currentTarget.src)}
       />
-      <div className="absolute inset-0 bg-black/80 z-0" />
+      <div className="absolute inset-0 bg-black/60 z-0" />
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -88,14 +88,14 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="mt-28 relative max-w-5xl mx-auto"
+          className="mt-48 relative max-w-5xl mx-auto"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
              {[
                { title: "Daily Deals", img: c1 },
                { title: "Bulk Offers", img: c2 },
                { title: "Customer Basket", img: c3 },
-               { title: "WhatsApp Order", img: c4 },
+               { title: "IN APP ORDERS", img: c4 },
                { title: "Packing Slip", img: c5 },
                { title: "Payment Check", img: c6 },
                { title: "Collection / Delivery", img: c7 },
