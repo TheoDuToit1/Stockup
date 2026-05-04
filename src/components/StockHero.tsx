@@ -54,6 +54,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
               onClick={onContactClick}
               className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#25D366] text-white rounded-[9px] font-black text-lg uppercase italic tracking-tighter shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba59] active:scale-95 transition-all duration-300"
             >
+              <img src="/whatsapp-icon.png" alt="WhatsApp" className="relative z-10 w-9 h-9 object-contain" />
               <span className="relative z-10">Discuss YOUR CUSTOM BUILD</span>
               <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
             </button>

@@ -151,7 +151,10 @@ export default function App() {
           <div className="hidden lg:flex items-center gap-8">
             <span className="text-[10px] uppercase tracking-[0.3em] text-text-secondary font-black">South Africa • POPIA Compliant</span>
             <Button onClick={openWhatsApp} variant="outline" className="h-10 py-0 px-6 text-xs transform hover:scale-105 shadow-sm">Custom system options</Button>
-            <Button onClick={openWhatsApp} variant="whatsapp" className="h-10 py-0 px-6 text-xs transform hover:scale-105">WhatsApp Call</Button>
+            <Button onClick={openWhatsApp} variant="whatsapp" className="h-10 py-0 px-6 text-xs transform hover:scale-105">
+              <img src="/whatsapp-icon.png" alt="WhatsApp" className="w-6 h-6 object-contain" />
+              WhatsApp Call
+            </Button>
           </div>
           <button onClick={openWhatsApp} className="lg:hidden bg-[#25D366] text-white w-10 h-10 rounded-[9px] flex items-center justify-center shadow-[0_0_15px_rgba(37,211,102,0.3)]">
             <Zap size={20} fill="white" />
