@@ -12,6 +12,11 @@ interface StockHeroProps {
 export default function StockHero({ onContactClick }: StockHeroProps) {
   return (
     <section className="relative pt-32 pb-48 overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-cover bg-center z-0" 
+        style={{ backgroundImage: "url('/background.jpeg')" }}
+      />
+      <div className="absolute inset-0 bg-black/80 z-0" />
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,9 +40,9 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-snug font-medium italic"
+            className="text-[18.5px] md:text-[22.5px] text-text-secondary max-w-4xl mx-auto leading-snug font-medium italic"
           >
-            Know your customers. Clean up orders. Give buyers more reason to stock up.
+            Know your customers. Promote daily deals. Give buyers more reason to stock up.
           </motion.p>
 
           <motion.div
@@ -69,7 +74,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="mt-16 relative max-w-5xl mx-auto"
+          className="mt-28 relative max-w-5xl mx-auto"
         >
           <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
              {[...Array(16)].map((_, i) => (
