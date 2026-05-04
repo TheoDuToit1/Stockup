@@ -13,9 +13,10 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
   return (
     <section className="relative pt-32 pb-48 overflow-hidden">
       <img
-        src="/hero-bg.jpeg"
+        src="/hbg.jpeg"
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover z-0"
+        onError={(e) => console.error("Failed to load hero background image:", e.currentTarget.src)}
       />
       <div className="absolute inset-0 bg-black/80 z-0" />
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
@@ -79,14 +80,14 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
              {[
-               { title: "Daily Deals", img: "/deal-1.jpeg" },
-               { title: "Bulk Offers", img: "/deal-2.jpeg" },
-               { title: "Customer Basket", img: "/deal-3.jpeg" },
-               { title: "WhatsApp Order", img: "/deal-4.jpeg" },
-               { title: "Packing Slip", img: "/deal-5.jpeg" },
-               { title: "Payment Check", img: "/deal-6.jpeg" },
-               { title: "Collection / Delivery", img: "/deal-7.jpeg" },
-               { title: "Customer Database", img: "/deal-8.jpeg" },
+               { title: "Daily Deals", img: "/c1.jpeg" },
+               { title: "Bulk Offers", img: "/c2.jpeg" },
+               { title: "Customer Basket", img: "/c3.jpeg" },
+               { title: "WhatsApp Order", img: "/c4.jpeg" },
+               { title: "Packing Slip", img: "/c5.jpeg" },
+               { title: "Payment Check", img: "/c6.jpeg" },
+               { title: "Collection / Delivery", img: "/c7.jpeg" },
+               { title: "Customer Database", img: "/c8.jpeg" },
              ].map((card, i) => (
                <div key={i} className="aspect-[4/3] bg-card border border-white/5 rounded-2xl flex flex-col items-center justify-center shadow-sm relative group overflow-hidden px-2">
                   {card.img && (
@@ -94,6 +95,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
                       src={card.img}
                       alt={card.title}
                       className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 group-hover:scale-105" 
+                      onError={(e) => console.error(`Failed to load card image for ${card.title}:`, e.currentTarget.src)}
                     />
                   )}
                   {card.img && <div className="absolute inset-0 bg-black/50 z-0 transition-opacity duration-300 group-hover:bg-black/60" />}
