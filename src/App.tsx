@@ -32,6 +32,7 @@ import StockHero from './components/StockHero';
 import { GlobeLive } from './components/ui/cobe-globe-live';
 import { CinematicFooter } from './components/ui/motion-footer';
 import StockMetricChart from "./components/StockMetricChart";
+import { WhatsAppIcon } from "./components/ui/WhatsAppIcon";
 
 // --- Components ---
 
@@ -152,7 +153,7 @@ export default function App() {
             <span className="text-[10px] uppercase tracking-[0.3em] text-text-secondary font-black">South Africa • POPIA Compliant</span>
             <Button onClick={openWhatsApp} variant="outline" className="h-10 py-0 px-6 text-xs transform hover:scale-105 shadow-sm">Custom system options</Button>
             <Button onClick={openWhatsApp} variant="whatsapp" className="h-10 py-0 px-6 text-xs transform hover:scale-105">
-              <img src="/whatsapp-icon.png" alt="WhatsApp" className="w-6 h-6 object-contain" />
+              <WhatsAppIcon className="w-6 h-6" />
               WhatsApp Call
             </Button>
           </div>

@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { ArrowRight, Package, Box, ShoppingCart, Database } from "lucide-react";
+import { WhatsAppIcon } from "./ui/WhatsAppIcon";
 
 interface StockHeroProps {
   onContactClick: () => void;
@@ -18,11 +19,6 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
           transition={{ duration: 0.8 }}
           className="space-y-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-[9px] bg-primary/5 border border-primary/10 text-primary text-[10px] font-black uppercase tracking-widest mb-4">
-            <span className="w-2 h-2 rounded-[4px] bg-primary animate-pulse"></span>
-            Building SA's Smart Wholesale Layer
-          </div>
-
           <div className="space-y-4">
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
@@ -54,7 +50,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
               onClick={onContactClick}
               className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#25D366] text-white rounded-[9px] font-black text-lg uppercase italic tracking-tighter shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba59] active:scale-95 transition-all duration-300"
             >
-              <img src="/whatsapp-icon.png" alt="WhatsApp" className="relative z-10 w-9 h-9 object-contain" />
+              <WhatsAppIcon className="relative z-10 w-9 h-9" />
               <span className="relative z-10">Discuss YOUR CUSTOM BUILD</span>
               <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
             </button>

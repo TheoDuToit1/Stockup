@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cn } from "../../lib/utils";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 // Register ScrollTrigger safely for React
 if (typeof window !== "undefined") {
@@ -297,7 +298,7 @@ export function CinematicFooter() {
                   target="_blank"
                   className="px-10 py-5 rounded-[9px] bg-[#25D366] text-white font-bold text-sm md:text-base flex items-center gap-3 group shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba59]"
                 >
-                  <img src="/whatsapp-icon.png" alt="WhatsApp" className="w-9 h-9 object-contain" />
+                  <WhatsAppIcon className="w-9 h-9" />
                   WhatsApp Call
                 </MagneticButton>
                 
