@@ -295,17 +295,12 @@ export function CinematicFooter() {
                   as="a"
                   href="https://wa.me/27714329190"
                   target="_blank"
-                  className="glass-pill px-10 py-5 rounded-[9px] text-text font-bold text-sm md:text-base flex items-center gap-3 group"
+                  className="px-10 py-5 rounded-[9px] bg-[#25D366] text-white font-bold text-sm md:text-base flex items-center gap-3 group shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba59]"
                 >
                   WhatsApp Call
                 </MagneticButton>
                 
-                <MagneticButton 
-                  as="a"
-                  href="https://wa.me/27714329190"
-                  target="_blank"
-                  className="glass-pill px-10 py-5 rounded-[9px] text-text font-bold text-sm md:text-base flex items-center gap-3 group"
-                >
+                <MagneticButton className="glass-pill px-10 py-5 rounded-[9px] text-text font-bold text-sm md:text-base flex items-center gap-3 group">
                   Custom system options
                 </MagneticButton>
               </div>
@@ -318,12 +313,7 @@ export function CinematicFooter() {
                 <MagneticButton className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
                   Terms of Service
                 </MagneticButton>
-                <MagneticButton 
-                  as="a"
-                  href="https://wa.me/27714329190"
-                  target="_blank"
-                  className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text"
-                >
+                <MagneticButton className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
                   Direct Support
                 </MagneticButton>
               </div>

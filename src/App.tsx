@@ -43,12 +43,12 @@ export const Button = ({ children, onClick, variant = 'primary', className = '',
   id?: string,
   key?: React.Key
 }) => {
-  const baseStyles = "px-8 py-4 rounded-[9px] font-bold transition-all duration-300 flex items-center justify-center gap-2 text-sm uppercase tracking-tight active:scale-95 whitespace-nowrap glass-pill";
+  const baseStyles = "px-8 py-4 rounded-[9px] font-bold transition-all duration-300 flex items-center justify-center gap-2 text-sm uppercase tracking-tight active:scale-95 whitespace-nowrap";
   const variants = {
-    primary: "text-white",
-    secondary: "text-text",
-    outline: "text-text",
-    whatsapp: "text-white"
+    primary: "bg-primary text-white glass-pill",
+    secondary: "text-text glass-pill",
+    outline: "text-text glass-pill",
+    whatsapp: "bg-[#25D366] text-white border-none shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba59]"
   };
 
   return (
@@ -151,10 +151,10 @@ export default function App() {
           <div className="hidden lg:flex items-center gap-8">
             <span className="text-[10px] uppercase tracking-[0.3em] text-text-secondary font-black">South Africa • POPIA Compliant</span>
             <Button onClick={openWhatsApp} variant="outline" className="h-10 py-0 px-6 text-xs transform hover:scale-105 shadow-sm">Custom system options</Button>
-            <Button onClick={openWhatsApp} className="h-10 py-0 px-6 text-xs shadow-none transform hover:scale-105">WhatsApp Call</Button>
+            <Button onClick={openWhatsApp} variant="whatsapp" className="h-10 py-0 px-6 text-xs transform hover:scale-105">WhatsApp Call</Button>
           </div>
-          <button onClick={openWhatsApp} className="lg:hidden text-text-secondary">
-            <Zap size={24} />
+          <button onClick={openWhatsApp} className="lg:hidden bg-[#25D366] text-white w-10 h-10 rounded-[9px] flex items-center justify-center shadow-[0_0_15px_rgba(37,211,102,0.3)]">
+            <Zap size={20} fill="white" />
           </button>
         </div>
       </header>
@@ -578,7 +578,7 @@ export default function App() {
               onClick={openWhatsApp}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="glass-pill text-white w-14 h-14 rounded-[9px] flex items-center justify-center cursor-pointer"
+              className="bg-[#25D366] text-white w-14 h-14 rounded-[9px] flex items-center justify-center cursor-pointer shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:bg-[#20ba59]"
            >
              < Zap fill="white" size={24} />
              <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 border-2 border-white rounded-[4px] flex items-center justify-center text-[8px] font-bold">1</span>
