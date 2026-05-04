@@ -42,12 +42,12 @@ export const Button = ({ children, onClick, variant = 'primary', className = '',
   id?: string,
   key?: React.Key
 }) => {
-  const baseStyles = "px-8 py-4 rounded-[9px] font-bold transition-all duration-300 flex items-center justify-center gap-2 text-sm uppercase tracking-tight active:scale-95 whitespace-nowrap";
+  const baseStyles = "px-8 py-4 rounded-[9px] font-bold transition-all duration-300 flex items-center justify-center gap-2 text-sm uppercase tracking-tight active:scale-95 whitespace-nowrap glass-pill";
   const variants = {
-    primary: "bg-primary text-white hover:bg-blue-700 shadow-xl shadow-primary/20",
-    secondary: "bg-card border border-white/10 text-text hover:bg-white/5",
-    outline: "border border-white/10 bg-transparent hover:bg-white/5 text-text",
-    whatsapp: "bg-[#2563EB] text-white hover:opacity-90 rounded-[9px]"
+    primary: "text-white",
+    secondary: "text-text",
+    outline: "text-text",
+    whatsapp: "text-white"
   };
 
   return (
@@ -196,7 +196,7 @@ export default function App() {
                     Stop Guessing <br />Your Demand.
                   </p>
                   <p className="text-base md:text-lg text-text-secondary font-medium italic leading-snug">
-                    Fragmented sales channels like WhatsApp voice notes and manual counter sales create missed details and delays. StockUp centralises offline demand into one clear system.
+                    We have an internal messaging system between store and members so you dont have to fall for whatsapps rules. StockUp centralises offline demand into one clear system.
                   </p>
                </div>
             </div>
@@ -218,25 +218,25 @@ export default function App() {
             >
                {[
                  { 
-                   title: "Order Chaos", 
-                   desc: "Centralise WhatsApp messages, screenshots, and phone orders into one digital system. Reduce mistakes, delays, and lost revenue.",
-                   stat: "99%",
-                   statLabel: "Clarity",
-                   icon: <MessageSquare size={32} />
+                   title: "Direct Chat", 
+                   desc: "We have an internal messaging system between store and members so you dont have to fall for whatsapps rules. Reduce mistakes and lost revenue.",
+                   stat: "100%",
+                   statLabel: "Control",
+                   icon: <img src="/communication.gif" className="w-14 h-14 object-cover rounded-xl" alt="Direct Chat" />
                  },
                  { 
                    title: "Ghost Users", 
                    desc: "Convert anonymous transactions into real customer data. Capture names, numbers, and suburbs to build a valuable repeat-buying database.",
                    stat: "100%",
                    statLabel: "Ownership",
-                   icon: <UserMinus size={32} />
+                   icon: <img src="/ghost.gif" className="w-14 h-14 object-cover rounded-xl" alt="Ghost Users" />
                  },
                  { 
                    title: "Staff Lag", 
                    desc: "Clear workflows for packing, collection, and delivery eliminate internal confusion. Professionalize every step from basket to completion.",
                    stat: "5 Sec",
                    statLabel: "Capture",
-                   icon: <Clock size={32} />
+                   icon: <img src="/processing-speed.gif" className="w-14 h-14 object-cover rounded-xl" alt="Staff Lag" />
                  }
                ].map((item, i) => (
                  <motion.div 
@@ -342,7 +342,7 @@ export default function App() {
                   variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
                   className="bg-card p-8 md:p-12 hover:bg-white/[0.02] transition-colors duration-500"
                 >
-                   <Database className="text-primary mb-8" size={48} />
+                   <img src="/layers.gif" className="w-20 h-20 rounded-lg mb-8" alt="CRM" />
                    <h4 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter text-text mb-4 leading-none">The CRM <br />for Wholesalers</h4>
                    <p className="text-text-secondary text-lg font-medium italic leading-snug">Transformation is the goal. Map every buyer's area, frequency, and basket size. Turn your traditional business into a data-driven customer asset.</p>
                 </motion.div>
@@ -350,7 +350,7 @@ export default function App() {
                   variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
                   className="bg-card p-8 md:p-12 hover:bg-white/[0.02] transition-colors duration-500"
                 >
-                   <TrendingUp className="text-primary mb-8" size={48} />
+                   <img src="/engagement.gif" className="w-20 h-20 rounded-lg mb-8" alt="engagement" />
                    <h4 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter text-text mb-4 leading-none">Drive <br />Repeat Sales</h4>
                    <p className="text-text-secondary text-lg font-medium italic leading-snug">Reactivate dormant customers with targeted promotions and segment-based offers. Make repeat purchasing simple, fast, and predictable.</p>
                 </motion.div>
@@ -358,7 +358,7 @@ export default function App() {
                    variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
                    className="bg-card p-8 md:p-12 hover:bg-white/[0.02] transition-colors duration-500"
                 >
-                   <ShieldCheck className="text-primary mb-8" size={48} />
+                   <img src="/secure.gif" className="w-20 h-20 rounded-lg mb-8" alt="secure" />
                    <h4 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter text-text mb-4 leading-none">Market <br />Realities</h4>
                    <p className="text-text-secondary text-lg font-medium italic leading-snug">Built specifically for South Africa. From proof-of-payment culture to POPIA-aware customer data handling—we design for how you trade.</p>
                 </motion.div>
@@ -404,28 +404,28 @@ export default function App() {
                  >
                    <div className="grid grid-cols-2 gap-4">
                       <div className="aspect-square bg-card border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:border-white/10 transition-all duration-500">
-                         <Smartphone className="text-primary" size={32} md:size={40} />
+                         <img src="/communication.gif" className="w-20 h-20 object-cover rounded-lg" alt="communication" />
                          <div>
-                            <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">WhatsApp First</div>
-                            <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">Designed for mobile buyers</div>
+                            <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">Direct Chat</div>
+                            <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">Internal member messaging</div>
                          </div>
                       </div>
                       <div className="aspect-square bg-card border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:border-white/10 transition-all duration-500">
-                         <Zap className="text-primary" size={32} md:size={40} />
+                         <img src="/processing-speed.gif" className="w-20 h-20 object-cover rounded-lg" alt="processing" />
                          <div>
                             <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">DATA SAVVY</div>
                             <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">&lt; 2MB per basket</div>
                          </div>
                       </div>
                       <div className="aspect-square bg-card border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:border-white/10 transition-all duration-500">
-                         <MessageSquare className="text-primary" size={32} md:size={40} />
+                         <img src="/engagement.gif" className="w-20 h-20 object-cover rounded-lg" alt="engagement" />
                          <div>
-                            <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">WhatsApp</div>
+                            <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">Mobile Optimized</div>
                             <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">EFT & Cash focus</div>
                          </div>
                       </div>
                       <div className="aspect-square bg-card border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:border-white/10 transition-all duration-500">
-                         <Truck className="text-primary" size={32} md:size={40} />
+                         <img src="/layers.gif" className="w-20 h-20 object-cover rounded-lg" alt="layers" />
                          <div>
                             <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">Collection</div>
                             <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">Flexible logistics models</div>
@@ -451,7 +451,7 @@ export default function App() {
                       <p className="text-lg text-text-secondary leading-relaxed font-medium italic">
                         We don't build "tech startup" apps. We build practical tools that respect real South African market realities—from data-sensitive users to cash-on-collection preferences. StockUp is built for the ground.
                       </p>
-                      <button onClick={openModal} className="group flex items-center gap-4 text-text font-black uppercase italic tracking-tighter text-xl outline-none">
+                      <button onClick={openModal} className="group flex items-center gap-4 text-text font-black uppercase italic tracking-tighter text-xl outline-none glass-pill px-8 py-4 rounded-[9px]">
                          Explore the pilot program 
                          <div className="w-12 h-12 bg-primary rounded-[9px] flex items-center justify-center text-white group-hover:translate-x-2 transition-transform duration-300">
                             <ArrowRight size={24} />
@@ -500,10 +500,10 @@ export default function App() {
                 className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
               >
                  {[
-                   { t: "Wholesalers", d: "Turn offline demand into digital growth.", i: <Package size={28} /> },
-                   { t: "Cash & Carry", d: "Manage walk-ins and phone orders centrally.", i: <Users size={28} /> },
-                   { t: "Bulk Suppliers", d: "Efficient ordering for regular traders.", i: <CheckCircle2 size={28} /> },
-                   { t: "Distributors", d: "Track areas, suburbs, and purchase patterns.", i: <Box size={28} /> }
+                   { t: "Wholesalers", d: "Turn offline demand into digital growth.", i: <img src="/layers.gif" className="w-16 h-16 rounded-md" alt="layers" /> },
+                   { t: "Cash & Carry", d: "Manage walk-ins and phone orders centrally.", i: <img src="/communication.gif" className="w-16 h-16 rounded-md" alt="comm" /> },
+                   { t: "Bulk Suppliers", d: "Efficient ordering for regular traders.", i: <img src="/processing-speed.gif" className="w-16 h-16 rounded-md" alt="speed" /> },
+                   { t: "Distributors", d: "Track areas, suburbs, and purchase patterns.", i: <img src="/engagement.gif" className="w-16 h-16 rounded-md" alt="engagement" /> }
                  ].map((ind, i) => (
                    <motion.div 
                      key={i} 
@@ -514,7 +514,7 @@ export default function App() {
                      whileHover={{ y: -8, backgroundColor: "rgba(255, 255, 255, 0.04)" }}
                      className="p-8 bg-white/[0.02] border border-white/5 rounded-[32px] transition-all duration-300"
                    >
-                      <div className="w-14 h-14 bg-primary/10 border border-primary/20 rounded-2xl flex items-center justify-center text-primary mb-8 shadow-inner shadow-primary/5">
+                      <div className="w-20 h-20 bg-primary/10 border border-primary/20 rounded-2xl flex items-center justify-center text-primary mb-8 shadow-inner shadow-primary/5">
                          {ind.i}
                       </div>
                       <h4 className="text-xl font-black uppercase italic tracking-tighter mb-3 text-text leading-tight">
@@ -536,10 +536,10 @@ export default function App() {
                 RECLAIM YOUR <br /><span className="text-primary underline decoration-white/10 underline-offset-[20px]">GROWTH ASSET.</span>
               </h2>
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center">
-                 <button onClick={openModal} className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 bg-primary text-white rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl shadow-2xl shadow-primary/40 hover:scale-105 active:scale-95 transition-all duration-300">
+                 <button onClick={openModal} className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 text-white rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl glass-pill active:scale-95 transition-all duration-300">
                    Start Pilot 2026
                  </button>
-                 <button onClick={openModal} className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 bg-card border-2 border-white/10 text-text rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl hover:bg-white/5 active:scale-95 transition-all duration-300 shadow-sm">
+                 <button onClick={openModal} className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 text-text rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl glass-pill active:scale-95 transition-all duration-300">
                    Get Pricing
                  </button>
               </div>
@@ -564,7 +564,7 @@ export default function App() {
               onClick={openModal}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-primary text-white w-14 h-14 rounded-[9px] shadow-xl shadow-primary/30 flex items-center justify-center cursor-pointer"
+              className="glass-pill text-white w-14 h-14 rounded-[9px] flex items-center justify-center cursor-pointer"
            >
              < Zap fill="white" size={24} />
              <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 border-2 border-white rounded-[4px] flex items-center justify-center text-[8px] font-bold">1</span>

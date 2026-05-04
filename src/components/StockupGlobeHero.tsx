@@ -50,7 +50,7 @@ export default function StockupGlobeHero({ onContactClick }: { onContactClick: (
             className="max-w-4xl mx-auto"
           >
             <p className="text-xl md:text-2xl text-zinc-400 leading-snug font-medium italic">
-              Stop losing sales to WhatsApp voice notes and messy notebooks. <span className="text-white underline decoration-primary/40 underline-offset-8">STOCKUP</span> turns your order chaos into a professional digital asset. Capture every trader and grow your database with every sale.
+              We have an internal messaging system between store and members so you dont have to fall for whatsapps rules. <span className="text-white underline decoration-primary/40 underline-offset-8">STOCKUP</span> turns your order chaos into a professional digital asset. Capture every trader and grow your database with every sale.
             </p>
           </motion.div>
         </motion.div>
@@ -63,7 +63,7 @@ export default function StockupGlobeHero({ onContactClick }: { onContactClick: (
         >
           <button
             onClick={onContactClick}
-            className="group relative inline-flex items-center gap-3 px-10 py-5 bg-primary text-white rounded-[9px] font-black text-lg uppercase italic tracking-tighter shadow-[0_20px_50px_rgba(37,99,235,0.3)] hover:scale-105 transition-all duration-500 overflow-hidden"
+            className="group relative inline-flex items-center gap-3 px-10 py-5 text-white rounded-[9px] font-black text-lg uppercase italic tracking-tighter glass-pill active:scale-95 transition-all duration-500 overflow-hidden"
           >
             <span className="relative z-10">Book Discovery Call</span>
             <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
@@ -71,7 +71,7 @@ export default function StockupGlobeHero({ onContactClick }: { onContactClick: (
           
           <button
             onClick={onContactClick}
-            className="group relative inline-flex items-center gap-3 px-10 py-5 border border-zinc-800 bg-zinc-900/50 backdrop-blur-xl text-white rounded-[9px] font-black text-lg uppercase italic tracking-tighter hover:bg-zinc-800 hover:scale-105 transition-all duration-500 overflow-hidden"
+            className="group relative inline-flex items-center gap-3 px-10 py-5 text-white rounded-[9px] font-black text-lg uppercase italic tracking-tighter glass-pill active:scale-95 transition-all duration-500 overflow-hidden"
           >
             <span className="relative z-10">Request a Pilot</span>
           </button>
@@ -97,8 +97,8 @@ export default function StockupGlobeHero({ onContactClick }: { onContactClick: (
                 <MessageSquare size={24} />
               </div>
               <div className="flex flex-col text-left">
-                <span className="text-[10px] font-black uppercase tracking-widest text-zinc-600">WhatsApp</span>
-                <span className="text-lg font-bold text-white tracking-tight italic">Native Sharing</span>
+                <span className="text-[10px] font-black uppercase tracking-widest text-zinc-600">Direct Comms</span>
+                <span className="text-lg font-bold text-white tracking-tight italic">Internal Chat</span>
               </div>
            </div>
         </motion.div>

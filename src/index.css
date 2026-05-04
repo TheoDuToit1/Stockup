@@ -28,6 +28,20 @@
   --color-chart-foreground-muted: var(--chart-foreground-muted);
   --color-chart-foreground: var(--chart-foreground);
   --color-chart-background: var(--chart-background);
+
+  /* Glass Pill Variables */
+  --pill-bg-1: color-mix(in oklch, var(--color-text) 3%, transparent);
+  --pill-bg-2: color-mix(in oklch, var(--color-text) 1%, transparent);
+  --pill-shadow: color-mix(in oklch, #000 50%, transparent);
+  --pill-highlight: color-mix(in oklch, var(--color-text) 10%, transparent);
+  --pill-inset-shadow: color-mix(in oklch, #000 80%, transparent);
+  --pill-border: color-mix(in oklch, var(--color-text) 8%, transparent);
+  
+  --pill-bg-1-hover: color-mix(in oklch, var(--color-text) 8%, transparent);
+  --pill-bg-2-hover: color-mix(in oklch, var(--color-text) 2%, transparent);
+  --pill-border-hover: color-mix(in oklch, var(--color-text) 20%, transparent);
+  --pill-shadow-hover: color-mix(in oklch, #000 70%, transparent);
+  --pill-highlight-hover: color-mix(in oklch, var(--color-text) 20%, transparent);
 }
 
 :root {
@@ -113,4 +127,25 @@ body::before {
 
 .animate-float {
   animation: float 5s ease-in-out infinite;
+}
+
+.glass-pill {
+  background: linear-gradient(145deg, var(--pill-bg-1) 0%, var(--pill-bg-2) 100%);
+  box-shadow: 
+      0 10px 30px -10px var(--pill-shadow), 
+      inset 0 1px 1px var(--pill-highlight), 
+      inset 0 -1px 2px var(--pill-inset-shadow);
+  border: 1px solid var(--pill-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-pill:hover {
+  background: linear-gradient(145deg, var(--pill-bg-1-hover) 0%, var(--pill-bg-2-hover) 100%);
+  border-color: var(--pill-border-hover);
+  box-shadow: 
+      0 20px 40px -10px var(--pill-shadow-hover), 
+      inset 0 1px 1px var(--pill-highlight-hover);
+  color: var(--color-text);
 }

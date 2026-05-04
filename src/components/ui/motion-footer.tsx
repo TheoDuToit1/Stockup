@@ -20,20 +20,6 @@ const STYLES = `
 .cinematic-footer-wrapper {
   font-family: 'Plus Jakarta Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
-  
-  /* Dynamic Variables using standard shadcn/tailwind v4 tokens */
-  --pill-bg-1: color-mix(in oklch, var(--color-text) 3%, transparent);
-  --pill-bg-2: color-mix(in oklch, var(--color-text) 1%, transparent);
-  --pill-shadow: color-mix(in oklch, var(--color-bg) 50%, transparent);
-  --pill-highlight: color-mix(in oklch, var(--color-text) 10%, transparent);
-  --pill-inset-shadow: color-mix(in oklch, var(--color-bg) 80%, transparent);
-  --pill-border: color-mix(in oklch, var(--color-text) 8%, transparent);
-  
-  --pill-bg-1-hover: color-mix(in oklch, var(--color-text) 8%, transparent);
-  --pill-bg-2-hover: color-mix(in oklch, var(--color-text) 2%, transparent);
-  --pill-border-hover: color-mix(in oklch, var(--color-text) 20%, transparent);
-  --pill-shadow-hover: color-mix(in oklch, var(--color-bg) 70%, transparent);
-  --pill-highlight-hover: color-mix(in oklch, var(--color-text) 20%, transparent);
 }
 
 @keyframes footer-breathe {
@@ -82,28 +68,6 @@ const STYLES = `
     color-mix(in oklch, var(--color-primary) 15%, transparent) 40%, 
     transparent 70%
   );
-}
-
-/* Glass Pill Theming */
-.footer-glass-pill {
-  background: linear-gradient(145deg, var(--pill-bg-1) 0%, var(--pill-bg-2) 100%);
-  box-shadow: 
-      0 10px 30px -10px var(--pill-shadow), 
-      inset 0 1px 1px var(--pill-highlight), 
-      inset 0 -1px 2px var(--pill-inset-shadow);
-  border: 1px solid var(--pill-border);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.footer-glass-pill:hover {
-  background: linear-gradient(145deg, var(--pill-bg-1-hover) 0%, var(--pill-bg-2-hover) 100%);
-  border-color: var(--pill-border-hover);
-  box-shadow: 
-      0 20px 40px -10px var(--pill-shadow-hover), 
-      inset 0 1px 1px var(--pill-highlight-hover);
-  color: var(--color-text);
 }
 
 /* Giant Background Text Masking */
@@ -327,25 +291,25 @@ export function CinematicFooter() {
             <div ref={linksRef} className="flex flex-col items-center gap-6 w-full">
               {/* Main Links */}
               <div className="flex flex-wrap justify-center gap-4 w-full">
-                <MagneticButton className="footer-glass-pill px-10 py-5 rounded-[9px] text-text font-bold text-sm md:text-base flex items-center gap-3 group">
+                <MagneticButton className="glass-pill px-10 py-5 rounded-[9px] text-text font-bold text-sm md:text-base flex items-center gap-3 group">
                   Book 15-Min Talk
                 </MagneticButton>
                 
-                <MagneticButton className="footer-glass-pill px-10 py-5 rounded-[9px] text-text font-bold text-sm md:text-base flex items-center gap-3 group">
+                <MagneticButton className="glass-pill px-10 py-5 rounded-[9px] text-text font-bold text-sm md:text-base flex items-center gap-3 group">
                   Request Pilot
                 </MagneticButton>
               </div>
 
               {/* Secondary Text Links */}
               <div className="flex flex-wrap justify-center gap-3 md:gap-6 w-full mt-2">
-                <MagneticButton className="footer-glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
+                <MagneticButton className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
                   Privacy Policy
                 </MagneticButton>
-                <MagneticButton className="footer-glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
+                <MagneticButton className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
                   Terms of Service
                 </MagneticButton>
-                <MagneticButton className="footer-glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
-                  WhatsApp Support
+                <MagneticButton className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
+                  Direct Support
                 </MagneticButton>
               </div>
             </div>
@@ -360,7 +324,7 @@ export function CinematicFooter() {
             </div>
 
             {/* "Crafted" Badge */}
-            <div className="footer-glass-pill px-6 py-3 rounded-[9px] flex items-center gap-2 order-1 md:order-2 cursor-default border-white/5">
+            <div className="glass-pill px-6 py-3 rounded-[9px] flex items-center gap-2 order-1 md:order-2 cursor-default border-white/5">
               <span className="text-text-secondary text-[10px] md:text-xs font-bold uppercase tracking-widest">Designed for</span>
               <span className="text-foreground font-black text-xs md:text-sm tracking-normal ml-1">SOUTH AFRICA</span>
             </div>
@@ -369,7 +333,7 @@ export function CinematicFooter() {
             <MagneticButton
               as="button"
               onClick={scrollToTop}
-              className="w-12 h-12 rounded-[9px] footer-glass-pill flex items-center justify-center text-text-secondary hover:text-text group order-3"
+              className="w-12 h-12 rounded-[9px] glass-pill flex items-center justify-center text-text-secondary hover:text-text group order-3"
             >
               <svg className="w-5 h-5 transform group-hover:-translate-y-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
