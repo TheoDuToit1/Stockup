@@ -5,15 +5,17 @@ import { motion } from "motion/react";
 import { ArrowRight, Package, Database } from "lucide-react";
 import { WhatsAppIcon } from "./ui/WhatsAppIcon";
 
-import hbg from "../assets/hbg.jpeg";
-import c1 from "../assets/c1.jpeg";
-import c2 from "../assets/c2.jpeg";
-import c3 from "../assets/c3.jpeg";
-import c4 from "../assets/c4.jpeg";
-import c5 from "../assets/c5.jpeg";
-import c6 from "../assets/c6.jpeg";
-import c7 from "../assets/c7.jpeg";
-import c8 from "../assets/c8.jpeg";
+import {
+  hbgDataUrl as hbg,
+  c1DataUrl as c1,
+  c2DataUrl as c2,
+  c3DataUrl as c3,
+  c4DataUrl as c4,
+  c5DataUrl as c5,
+  c6DataUrl as c6,
+  c7DataUrl as c7,
+  c8DataUrl as c8
+} from "../assets/image-data";
 
 interface StockHeroProps {
   onContactClick: () => void;

@@ -1095,8 +1095,8 @@ function ChartInner({
 }: { width: number; height: number; data: Record<string, unknown>[]; xDataKey: string; margin: Margin; animationDuration: number; children: ReactNode; containerRef: RefObject<HTMLDivElement | null>; }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const lines = useMemo(() => extractAreaConfigs(children), [children]);
-  const innerWidth = width - margin.left - margin.right;
-  const innerHeight = height - margin.top - margin.bottom;
+  const innerWidth = Math.max(0, width - margin.left - margin.right);
+  const innerHeight = Math.max(0, height - margin.top - margin.bottom);
   const xAccessor = useCallback((d: Record<string, unknown>): Date => {
     const value = d[xDataKey]; return value instanceof Date ? value : new Date(value as string | number);
   }, [xDataKey]);
