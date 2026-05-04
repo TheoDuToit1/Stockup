@@ -14,23 +14,13 @@ export default function StockupGlobeHero({ onContactClick }: { onContactClick: (
     >
       <div className="absolute inset-0 bg-gradient-to-t from-bg-dark via-transparent to-bg-dark/30" />
       
-      <div className="relative z-10 text-center space-y-12 max-w-7xl mx-auto px-6 py-24">
+      <div className="relative z-10 text-center space-y-6 max-w-7xl mx-auto px-6 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="space-y-10"
         >
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative inline-flex items-center gap-3 px-6 py-2 rounded-[9px] bg-primary/10 border border-primary/20 backdrop-blur-xl"
-          >
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="relative z-10 text-[10px] font-black text-primary tracking-widest uppercase">Wholesale Operations Upgrade 2024</span>
-          </motion.div>
-          
           <div className="space-y-4">
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
@@ -50,7 +40,7 @@ export default function StockupGlobeHero({ onContactClick }: { onContactClick: (
             className="max-w-4xl mx-auto"
           >
             <p className="text-xl md:text-2xl text-zinc-400 leading-snug font-medium italic">
-              We have an internal messaging system between store and members so you dont have to fall for whatsapps rules. <span className="text-white underline decoration-primary/40 underline-offset-8">STOCKUP</span> turns your order chaos into a professional digital asset. Capture every trader and grow your database with every sale.
+              You have an internal messaging system between stores and members so you have to follow WhatsApps rules. <span className="text-white underline decoration-primary/40 underline-offset-8">STOCKUP</span> turns your order chaos into a professional digital asset. Capture every trader and grow your database with every sale.
             </p>
           </motion.div>
         </motion.div>

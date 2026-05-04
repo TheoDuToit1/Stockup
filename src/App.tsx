@@ -33,6 +33,7 @@ import { GlobeLive } from './components/ui/cobe-globe-live';
 import { CinematicFooter } from './components/ui/motion-footer';
 import StockMetricChart from "./components/StockMetricChart";
 import { WhatsAppIcon } from "./components/ui/WhatsAppIcon";
+import { communicationGif, engagementGif, ghostGif, layersGif, processingSpeedGif, secureGif } from './assets/gifs';
 
 // --- Components ---
 
@@ -168,7 +169,7 @@ export default function App() {
         <StockHero onContactClick={openWhatsApp} />
 
         {/* Section: The Reality of Chaos */}
-        <section id="how-it-works" className="py-24 md:py-64 relative overflow-hidden">
+        <section id="how-it-works" className="py-12 md:py-32 relative overflow-hidden">
           {/* Giant Background Text Mask */}
            <div 
              className="absolute bottom-0 left-0 w-full text-center translate-y-1/4 text-[calc(40vw-2px)] md:text-[calc(25vw-2px)] font-black text-white/[0.03] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0"
@@ -179,15 +180,11 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-center mb-16 md:mb-32">
                <div className="lg:col-span-5">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 text-red-500 text-[10px] font-black uppercase tracking-widest mb-6 rounded-[4px] border border-white/5">
-                    <span className="w-1.5 h-1.5 rounded-[4px] bg-red-500 animate-pulse"></span>
-                    Revenue Leak Active
-                  </div>
                   <h2 className="text-4xl md:text-7xl lg:text-[100px] font-black uppercase italic tracking-tighter text-text leading-[0.75]">
-                    ORDER <br />
+                    FULL <br />
                     CONTROL <br />
-                    <span className="text-primary">IS THE</span> <br />
-                    <span className="text-white/5">PRIORITY.</span>
+                    <span className="text-primary">ALL IN 1</span> <br />
+                    <span className="text-white/20">PLACE.</span>
                   </h2>
                </div>
 
@@ -200,10 +197,10 @@ export default function App() {
 
                <div className="lg:col-span-3 pb-8">
                   <p className="text-xl md:text-3xl text-text font-black uppercase italic tracking-tighter leading-none mb-4 md:mb-6">
-                    Stop Guessing <br />Your Demand.
+                    Stop Guessing <br />Customer Demand.
                   </p>
                   <p className="text-base md:text-lg text-text-secondary font-medium italic leading-snug">
-                    We have an internal messaging system between store and members so you dont have to fall for whatsapps rules. StockUp centralises offline demand into one clear system.
+                    You have an internal messaging system between stores and members so you have to follow WhatsApps rules.
                   </p>
                </div>
             </div>
@@ -226,24 +223,24 @@ export default function App() {
                {[
                  { 
                    title: "Direct Chat", 
-                   desc: "We have an internal messaging system between store and members so you dont have to fall for whatsapps rules. Reduce mistakes and lost revenue.",
+                   desc: "You have an internal messaging system between stores and members so you have to follow WhatsApps rules. Reduce mistakes and lost revenue.",
                    stat: "100%",
                    statLabel: "Control",
-                   icon: <img src="/communication.gif" className="w-14 h-14 object-cover rounded-xl" alt="Direct Chat" />
+                   icon: <img src={communicationGif} className="w-14 h-14 object-cover rounded-xl" alt="Direct Chat" />
                  },
                  { 
                    title: "Ghost Users", 
                    desc: "Convert anonymous transactions into real customer data. Capture names, numbers, and suburbs to build a valuable repeat-buying database.",
                    stat: "100%",
                    statLabel: "Ownership",
-                   icon: <img src="/ghost.gif" className="w-14 h-14 object-cover rounded-xl" alt="Ghost Users" />
+                   icon: <img src={ghostGif} className="w-14 h-14 object-cover rounded-xl" alt="Ghost Users" />
                  },
                  { 
                    title: "Staff Lag", 
                    desc: "Clear workflows for packing, collection, and delivery eliminate internal confusion. Professionalize every step from basket to completion.",
                    stat: "5 Sec",
                    statLabel: "Capture",
-                   icon: <img src="/processing-speed.gif" className="w-14 h-14 object-cover rounded-xl" alt="Staff Lag" />
+                   icon: <img src={processingSpeedGif} className="w-14 h-14 object-cover rounded-xl" alt="Staff Lag" />
                  }
                ].map((item, i) => (
                  <motion.div 
@@ -343,7 +340,7 @@ export default function App() {
                   variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
                   className="bg-card p-8 md:p-12 hover:bg-white/[0.02] transition-colors duration-500"
                 >
-                   <img src="/layers.gif" className="w-20 h-20 rounded-lg mb-8" alt="CRM" />
+                   <img src={layersGif} className="w-20 h-20 rounded-lg mb-8" alt="CRM" />
                    <h4 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter text-text mb-4 leading-none">The CRM <br />for Wholesalers</h4>
                    <p className="text-text-secondary text-lg font-medium italic leading-snug">Transformation is the goal. Map every buyer's area, frequency, and basket size. Turn your traditional business into a data-driven customer asset.</p>
                 </motion.div>
@@ -351,7 +348,7 @@ export default function App() {
                   variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
                   className="bg-card p-8 md:p-12 hover:bg-white/[0.02] transition-colors duration-500"
                 >
-                   <img src="/engagement.gif" className="w-20 h-20 rounded-lg mb-8" alt="engagement" />
+                   <img src={engagementGif} className="w-20 h-20 rounded-lg mb-8" alt="engagement" />
                    <h4 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter text-text mb-4 leading-none">Drive <br />Repeat Sales</h4>
                    <p className="text-text-secondary text-lg font-medium italic leading-snug">Reactivate dormant customers with targeted promotions and segment-based offers. Make repeat purchasing simple, fast, and predictable.</p>
                 </motion.div>
@@ -359,7 +356,7 @@ export default function App() {
                    variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
                    className="bg-card p-8 md:p-12 hover:bg-white/[0.02] transition-colors duration-500"
                 >
-                   <img src="/secure.gif" className="w-20 h-20 rounded-lg mb-8" alt="secure" />
+                   <img src={secureGif} className="w-20 h-20 rounded-lg mb-8" alt="secure" />
                    <h4 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter text-text mb-4 leading-none">Market <br />Realities</h4>
                    <p className="text-text-secondary text-lg font-medium italic leading-snug">Built specifically for South Africa. From proof-of-payment culture to POPIA-aware customer data handling—we design for how you trade.</p>
                 </motion.div>
@@ -405,28 +402,28 @@ export default function App() {
                  >
                    <div className="grid grid-cols-2 gap-4">
                       <div className="aspect-square bg-card border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:border-white/10 transition-all duration-500">
-                         <img src="/communication.gif" className="w-20 h-20 object-cover rounded-lg" alt="communication" />
+                         <img src={communicationGif} className="w-20 h-20 object-cover rounded-lg" alt="communication" />
                          <div>
                             <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">Direct Chat</div>
                             <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">Internal member messaging</div>
                          </div>
                       </div>
                       <div className="aspect-square bg-card border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:border-white/10 transition-all duration-500">
-                         <img src="/processing-speed.gif" className="w-20 h-20 object-cover rounded-lg" alt="processing" />
+                         <img src={processingSpeedGif} className="w-20 h-20 object-cover rounded-lg" alt="processing" />
                          <div>
                             <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">DATA SAVVY</div>
                             <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">&lt; 2MB per basket</div>
                          </div>
                       </div>
                       <div className="aspect-square bg-card border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:border-white/10 transition-all duration-500">
-                         <img src="/engagement.gif" className="w-20 h-20 object-cover rounded-lg" alt="engagement" />
+                         <img src={engagementGif} className="w-20 h-20 object-cover rounded-lg" alt="engagement" />
                          <div>
                             <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">Mobile Optimized</div>
                             <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">EFT & Cash focus</div>
                          </div>
                       </div>
                       <div className="aspect-square bg-card border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:border-white/10 transition-all duration-500">
-                         <img src="/layers.gif" className="w-20 h-20 object-cover rounded-lg" alt="layers" />
+                         <img src={layersGif} className="w-20 h-20 object-cover rounded-lg" alt="layers" />
                          <div>
                             <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">Collection</div>
                             <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">Flexible logistics models</div>
@@ -501,10 +498,10 @@ export default function App() {
                 className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
               >
                  {[
-                   { t: "Wholesalers", d: "Turn offline demand into digital growth.", i: <img src="/layers.gif" className="w-16 h-16 rounded-md" alt="layers" /> },
-                   { t: "Cash & Carry", d: "Manage walk-ins and phone orders centrally.", i: <img src="/communication.gif" className="w-16 h-16 rounded-md" alt="comm" /> },
-                   { t: "Bulk Suppliers", d: "Efficient ordering for regular traders.", i: <img src="/processing-speed.gif" className="w-16 h-16 rounded-md" alt="speed" /> },
-                   { t: "Distributors", d: "Track areas, suburbs, and purchase patterns.", i: <img src="/engagement.gif" className="w-16 h-16 rounded-md" alt="engagement" /> }
+                   { t: "Wholesalers", d: "Turn offline demand into digital growth.", i: <img src={layersGif} className="w-16 h-16 rounded-md" alt="layers" /> },
+                   { t: "Cash & Carry", d: "Manage walk-ins and phone orders centrally.", i: <img src={communicationGif} className="w-16 h-16 rounded-md" alt="comm" /> },
+                   { t: "Bulk Suppliers", d: "Efficient ordering for regular traders.", i: <img src={processingSpeedGif} className="w-16 h-16 rounded-md" alt="speed" /> },
+                   { t: "Distributors", d: "Track areas, suburbs, and purchase patterns.", i: <img src={engagementGif} className="w-16 h-16 rounded-md" alt="engagement" /> }
                  ].map((ind, i) => (
                    <motion.div 
                      key={i} 

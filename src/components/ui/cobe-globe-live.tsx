@@ -165,10 +165,6 @@ export function GlobeLive({
         >
         </div>
       ))}
-      <div className="absolute top-4 right-4 flex items-center gap-2 px-3 py-1.5 bg-black/40 backdrop-blur-md rounded-[9px] border border-white/10">
-        <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-        <span className="text-[10px] font-black uppercase tracking-widest text-text leading-none">{liveViewers.toLocaleString()} TRADERS ONLINE</span>
-      </div>
     </div>
   )
 }

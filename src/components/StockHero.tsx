@@ -94,7 +94,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
              {[
                { title: "Daily Deals", img: c1 },
                { title: "Bulk Offers", img: c2 },
-               { title: "Customer Basket", img: c3 },
+               { title: "Upsell Options", img: c3 },
                { title: "IN APP ORDERS", img: c4 },
                { title: "Packing Slip", img: c5 },
                { title: "Payment Check", img: c6 },
