@@ -50,11 +50,11 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8"
+            className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-8"
           >
             <button
               onClick={onContactClick}
-              className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#25D366] text-white rounded-[9px] font-black text-lg uppercase italic tracking-tighter shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba59] active:scale-95 transition-all duration-300"
+              className="group relative inline-flex items-center gap-5 px-10 py-5 bg-[#25D366] text-white rounded-[9px] font-black text-lg uppercase italic tracking-tighter shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba59] active:scale-95 transition-all duration-300"
             >
               <WhatsAppIcon className="relative z-10 w-9 h-9" />
               <span className="relative z-10">Discuss YOUR CUSTOM BUILD</span>
@@ -63,7 +63,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
             
             <button
               onClick={onContactClick}
-              className="group relative inline-flex items-center gap-3 px-10 py-5 text-text rounded-[9px] font-black text-lg uppercase italic tracking-tighter glass-pill active:scale-95 transition-all duration-300"
+              className="group relative inline-flex items-center gap-5 px-10 py-5 text-text rounded-[9px] font-black text-lg uppercase italic tracking-tighter glass-pill active:scale-95 transition-all duration-300"
             >
               <span className="relative z-10">Custom system Options</span>
             </button>
