@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-primary: #2563EB;
+  --color-bg: #0A0A0B;
+  --color-card: #121214;
+  --color-text: #F9FAFB;
+  --color-text-secondary: #94A3B8;
+  --color-popover: #151517;
+  --color-popover-foreground: #F9FAFB;
+  --radius-xl: 16px;
+
+  --color-chart-label: var(--chart-label);
+  --color-chart-ring-background: var(--chart-ring-background);
+  --color-chart-marker-foreground: var(--chart-marker-foreground);
+  --color-chart-marker-border: var(--chart-marker-border);
+  --color-chart-marker-background: var(--chart-marker-background);
+  --color-chart-tooltip-muted: var(--chart-tooltip-muted);
+  --color-chart-tooltip-foreground: var(--chart-tooltip-foreground);
+  --color-chart-tooltip-background: var(--chart-tooltip-background);
+  --color-chart-grid: var(--chart-grid);
+  --color-chart-crosshair: var(--chart-crosshair);
+  --color-chart-line-secondary: var(--chart-line-secondary);
+  --color-chart-line-primary: var(--chart-line-primary);
+  --color-chart-foreground-muted: var(--chart-foreground-muted);
+  --color-chart-foreground: var(--chart-foreground);
+  --color-chart-background: var(--chart-background);
+
+  /* Glass Pill Variables */
+  --pill-bg-1: color-mix(in oklch, var(--color-text) 3%, transparent);
+  --pill-bg-2: color-mix(in oklch, var(--color-text) 1%, transparent);
+  --pill-shadow: color-mix(in oklch, #000 50%, transparent);
+  --pill-highlight: color-mix(in oklch, var(--color-text) 10%, transparent);
+  --pill-inset-shadow: color-mix(in oklch, #000 80%, transparent);
+  --pill-border: color-mix(in oklch, var(--color-text) 8%, transparent);
+  
+  --pill-bg-1-hover: color-mix(in oklch, var(--color-text) 8%, transparent);
+  --pill-bg-2-hover: color-mix(in oklch, var(--color-text) 2%, transparent);
+  --pill-border-hover: color-mix(in oklch, var(--color-text) 20%, transparent);
+  --pill-shadow-hover: color-mix(in oklch, #000 70%, transparent);
+  --pill-highlight-hover: color-mix(in oklch, var(--color-text) 20%, transparent);
+}
+
+:root {
+  --chart-background: oklch(1 0 0);
+  --chart-foreground: oklch(0.145 0.004 285);
+  --chart-foreground-muted: oklch(0.55 0.014 260);
+  --chart-line-primary: #2563EB;
+  --chart-line-secondary: oklch(0.705 0.015 265);
+  --chart-crosshair: oklch(0.4 0.1828 274.34);
+  --chart-grid: oklch(0.9 0 0);
+  --chart-tooltip-background: oklch(0.21 0.006 285 / 0.8);
+  --chart-tooltip-foreground: oklch(0.985 0 0);
+  --chart-tooltip-muted: oklch(0.65 0.01 260);
+  --chart-marker-background: oklch(0.97 0.005 260);
+  --chart-marker-border: oklch(0.85 0.01 260);
+  --chart-marker-foreground: oklch(0.3 0.01 260);
+  --chart-ring-background: oklch(0.9 0.005 260 / 0.25);
+  --chart-label: oklch(0.45 0.01 260);
+}
+
+.dark {
+  --chart-background: oklch(0.145 0 0);
+  --chart-foreground: oklch(0.45 0 0);
+  --chart-foreground-muted: oklch(0.65 0.01 260);
+  --chart-crosshair: oklch(0.45 0 0);
+  --chart-grid: oklch(0.25 0 0);
+  --chart-marker-background: oklch(0.25 0.01 260);
+  --chart-marker-border: oklch(0.4 0.01 260);
+  --chart-marker-foreground: oklch(0.9 0 0);
+  --chart-ring-background: oklch(0.35 0.01 260 / 0.25);
+  --chart-label: oklch(0.75 0.01 260);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: -1;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.card-light {
+  background-color: var(--color-card);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 30px -2px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hero-text {
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.text-glow {
+  text-shadow: 0 0 60px rgba(37, 99, 235, 0.08);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.glass-pill {
+  background: linear-gradient(145deg, var(--pill-bg-1) 0%, var(--pill-bg-2) 100%);
+  box-shadow: 
+      0 10px 30px -10px var(--pill-shadow), 
+      inset 0 1px 1px var(--pill-highlight), 
+      inset 0 -1px 2px var(--pill-inset-shadow);
+  border: 1px solid var(--pill-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-pill:hover {
+  background: linear-gradient(145deg, var(--pill-bg-1-hover) 0%, var(--pill-bg-2-hover) 100%);
+  border-color: var(--pill-border-hover);
+  box-shadow: 
+      0 20px 40px -10px var(--pill-shadow-hover), 
+      inset 0 1px 1px var(--pill-highlight-hover);
+  color: var(--color-text);
+}
