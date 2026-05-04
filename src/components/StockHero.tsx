@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import { ArrowRight, Package, Database } from "lucide-react";
 import { WhatsAppIcon } from "./ui/WhatsAppIcon";
 import backgroundImage from "../assets/background.jpeg";
-import box1Image from "../assets/Box1.jpeg";
+import box1Image from "../assets/box1.jpeg";
 import box2Image from "../assets/box2.jpeg";
 import box3Image from "../assets/box3.jpeg";
 import box4Image from "../assets/box4.jpeg";
@@ -21,9 +21,10 @@ interface StockHeroProps {
 export default function StockHero({ onContactClick }: StockHeroProps) {
   return (
     <section className="relative pt-32 pb-48 overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center z-0" 
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+      <img
+        src={backgroundImage}
+        alt="Background"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       />
       <div className="absolute inset-0 bg-black/80 z-0" />
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
@@ -98,9 +99,10 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
              ].map((card, i) => (
                <div key={i} className="aspect-[4/3] bg-card border border-white/5 rounded-2xl flex flex-col items-center justify-center shadow-sm relative group overflow-hidden px-2">
                   {card.img && (
-                    <div 
-                      className="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-700 group-hover:scale-105" 
-                      style={{ backgroundImage: `url(${card.img})` }} 
+                    <img
+                      src={card.img}
+                      alt={card.title}
+                      className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 group-hover:scale-105" 
                     />
                   )}
                   {card.img && <div className="absolute inset-0 bg-black/50 z-0 transition-opacity duration-300 group-hover:bg-black/60" />}
