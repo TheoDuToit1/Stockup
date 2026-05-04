@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { ArrowRight, Package, Box, ShoppingCart, Database } from "lucide-react";
 import { WhatsAppIcon } from "./ui/WhatsAppIcon";
+import backgroundImage from "../assets/background.jpeg";
 
 interface StockHeroProps {
   onContactClick: () => void;
@@ -14,7 +15,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
     <section className="relative pt-32 pb-48 overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center z-0" 
-        style={{ backgroundImage: "url('/background.jpeg')" }}
+        style={{ backgroundImage: `url(${backgroundImage})` }}
       />
       <div className="absolute inset-0 bg-black/80 z-0" />
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
