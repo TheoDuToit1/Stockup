@@ -24,7 +24,8 @@ import {
   ShoppingCart,
   CheckCircle,
   Clock,
-  Box
+  Box,
+  ChevronDown
 } from 'lucide-react';
 
 import StockHero from './components/StockHero';
@@ -97,12 +98,16 @@ const ContactModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => voi
             <p className="text-text-secondary mb-6 text-sm font-medium italic">Let's talk about how STOCKUP can fix your inventory chaos.</p>
             <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}>
               <div>
-                <label className="block text-[10px] uppercase tracking-widest font-black text-text-secondary mb-2">Company Name</label>
-                <input type="text" required className="w-full p-4 bg-white/5 border border-white/10 text-text rounded-[9px] focus:outline-none focus:border-primary transition-colors font-bold uppercase placeholder:text-white/10" placeholder="CAPE TOWN DISTRIBUTORS" />
+                <label className="block text-[10px] uppercase tracking-widest font-black text-text-secondary mb-1">Company Name</label>
+                <input type="text" required className="w-full p-4 bg-white/5 border border-white/10 text-text rounded-[9px] focus:outline-none focus:border-primary transition-colors font-bold uppercase placeholder:text-white/10 text-sm" placeholder="CAPE TOWN DISTRIBUTORS" />
               </div>
               <div>
-                <label className="block text-[10px] uppercase tracking-widest font-black text-text-secondary mb-2">Mobile Number</label>
-                <input type="tel" required className="w-full p-4 bg-white/5 border border-white/10 text-text rounded-[9px] focus:outline-none focus:border-primary transition-colors font-bold placeholder:text-white/10" placeholder="082 123 4567" />
+                <label className="block text-[10px] uppercase tracking-widest font-black text-text-secondary mb-1">Email Address</label>
+                <input type="email" required className="w-full p-4 bg-white/5 border border-white/10 text-text rounded-[9px] focus:outline-none focus:border-primary transition-colors font-bold placeholder:text-white/10 text-sm" placeholder="trader@wholesaler.co.za" />
+              </div>
+              <div>
+                <label className="block text-[10px] uppercase tracking-widest font-black text-text-secondary mb-1">Mobile Number</label>
+                <input type="tel" required className="w-full p-4 bg-white/5 border border-white/10 text-text rounded-[9px] focus:outline-none focus:border-primary transition-colors font-bold placeholder:text-white/10 text-sm" placeholder="082 123 4567" />
               </div>
               <Button className="w-full mt-4 h-16">Submit Request</Button>
             </form>
@@ -113,7 +118,7 @@ const ContactModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => voi
               <CheckCircle2 size={40} />
             </div>
             <h3 className="text-3xl font-black italic uppercase tracking-tighter mb-2 text-text">Confirmed</h3>
-            <p className="text-text-secondary mb-8 font-medium italic">We'll contact you within 24 hours.</p>
+            <p className="text-text-secondary mb-8 font-medium italic">You will be called within 24 hours.</p>
             <Button onClick={onClose} variant="secondary" className="w-full h-16 text-text">Close</Button>
           </div>
         )}
@@ -160,14 +165,11 @@ export default function App() {
         {/* Section: The Reality of Chaos */}
         <section id="how-it-works" className="py-24 md:py-64 relative overflow-hidden">
           {/* Giant Background Text Mask */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1.5 }}
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 text-[40vw] md:text-[25vw] font-black text-white/[0.03] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0"
-          >
-            LEAKING
-          </motion.div>
+           <div 
+             className="absolute bottom-0 left-0 w-full text-center translate-y-1/4 text-[calc(40vw-2px)] md:text-[calc(25vw-2px)] font-black text-white/[0.03] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0"
+           >
+             LEAKING
+           </div>
 
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-center mb-16 md:mb-32">
@@ -285,14 +287,11 @@ export default function App() {
                 style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
            
            {/* Giant Background Text Mask */}
-           <motion.div 
-             initial={{ opacity: 0, x: -50 }}
-             whileInView={{ opacity: 1, x: "-50%" }}
-             transition={{ duration: 1.5, ease: "easeOut" }}
-             className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 text-[40vw] md:text-[25vw] font-black text-white/[0.03] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0"
+           <div 
+             className="absolute bottom-0 left-0 w-full text-center translate-y-1/4 text-[calc(40vw-2px)] md:text-[calc(25vw-2px)] font-black text-white/[0.05] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0"
            >
              SCALING
-           </motion.div>
+           </div>
 
            <div className="max-w-7xl mx-auto px-6 relative z-10">
               <StockMetricChart />
@@ -302,14 +301,11 @@ export default function App() {
         {/* Section: The Database Vault */}
         <section className="py-24 md:py-48 bg-card border-y border-white/5 relative overflow-hidden">
           {/* Large Back Decor */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1.5 }}
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 text-[40vw] md:text-[25vw] font-black text-white/[0.03] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0"
+          <div 
+            className="absolute bottom-0 left-0 w-full text-center translate-y-1/4 text-[calc(40vw-2px)] md:text-[calc(25vw-2px)] font-black text-white/[0.05] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0"
           >
              DATA
-          </motion.div>
+          </div>
 
           <div className="max-w-7xl mx-auto px-6 relative z-10">
              <motion.div 
@@ -548,8 +544,25 @@ export default function App() {
                  <div className="w-2 h-2 bg-primary rounded-[4px] animate-pulse"></div>
                  <span>S.A Focus Only</span>
               </div>
+
+              {/* Scroll Prompt */}
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="mt-24 flex flex-col items-center gap-4 pointer-events-none text-center"
+              >
+                <span className="text-[10px] font-black uppercase tracking-[0.5em] text-text-secondary/40 ml-[0.5em]">Keep Scrolling</span>
+                <motion.div 
+                  animate={{ y: [0, 8, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  className="text-primary/40 flex justify-center w-full"
+                >
+                  <ChevronDown size={24} strokeWidth={3} />
+                </motion.div>
+              </motion.div>
            </div>
-           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 text-[25vw] font-black text-white/[0.03] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap">
+           <div className="absolute bottom-0 left-0 w-full text-center translate-y-1/4 text-[calc(25vw-2px)] font-black text-white/[0.03] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap">
              STOCKUP
            </div>
         </section>

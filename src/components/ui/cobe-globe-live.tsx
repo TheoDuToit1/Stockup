@@ -94,14 +94,14 @@ export function GlobeLive({
         devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
         width, height: width,
         phi: 0, theta: 0.2, dark: 1, diffuse: 1.5,
-        mapSamples: 16000, mapBrightness: 6,
-        baseColor: [0.1, 0.1, 0.1],
-        markerColor: [37 / 255, 99 / 255, 235 / 255], // Using primary color #2563EB
-        glowColor: [0.1, 0.1, 0.1],
+        mapSamples: 16000, mapBrightness: 12,
+        baseColor: [0.2, 0.2, 0.2],
+        markerColor: [37 / 255, 120 / 255, 255 / 255], // Brighter primary
+        glowColor: [0.5, 0.5, 0.5],
         markerElevation: 0.1,
-        markers: markers.map((m) => ({ location: m.location, size: 0.05, id: m.id })),
+        markers: markers.map((m) => ({ location: m.location, size: 0.08, id: m.id })),
         arcs: [], arcColor: [45 / 255, 184 / 255, 75 / 255],
-        arcWidth: 0.5, arcHeight: 0.25, opacity: 0.7,
+        arcWidth: 0.5, arcHeight: 0.25, opacity: 0.8,
       })
       function animate() {
         if (!isPausedRef.current) phi += speed
@@ -135,6 +135,7 @@ export function GlobeLive({
 
   return (
     <div className={`relative aspect-square select-none ${className}`}>
+      <div className="absolute inset-0 bg-primary/5 rounded-full blur-[80px] pointer-events-none" />
       <style>{`
         @keyframes live-pulse {
           0%, 100% { opacity: 1; }

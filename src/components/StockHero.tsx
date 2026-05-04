@@ -30,8 +30,8 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
               transition={{ duration: 1, delay: 0.2 }}
               className="font-black tracking-tighter uppercase italic leading-[0.8] text-glow flex flex-col items-center"
             >
-              <span className="block text-4xl sm:text-5xl md:text-8xl xl:text-[124px] text-text whitespace-normal md:whitespace-nowrap leading-none">MOVE MORE STOCK.</span>
-              <span className="block text-2xl sm:text-3xl md:text-6xl xl:text-[78px] text-primary mt-2">OWN EVERY CUSTOMER.</span>
+              <span className="block text-[27.5px] sm:text-[39.5px] md:text-[87.5px] xl:text-[115.5px] text-text whitespace-normal md:whitespace-nowrap leading-none">WHOLESALE SUCCESS IN 2026.</span>
+              <span className="block text-2xl sm:text-3xl md:text-6xl xl:text-[78px] text-primary mt-2">STARTS WITH SMARTER SYSTEMS.</span>
             </motion.h1>
           </div>
 
@@ -41,9 +41,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-snug font-medium italic"
           >
-            Built for South African wholesalers, cash-and-carry businesses, and bulk suppliers. 
-            <span className="text-text font-bold decoration-primary/30 underline underline-offset-8"> STOCKUP</span> 
-            turns fragmented offline demand into organised digital sales, cleaner operations, and valuable customer ownership.
+            Know your customers. Clean up orders. Give buyers more reason to stock up.
           </motion.p>
 
           <motion.div

@@ -72,7 +72,7 @@ const STYLES = `
 
 /* Giant Background Text Masking */
 .footer-giant-bg-text {
-  font-size: 19vw;
+  font-size: calc(19vw - 2px);
   line-height: 0.75;
   font-weight: 900;
   letter-spacing: -0.05em;
@@ -265,7 +265,7 @@ export function CinematicFooter() {
           {/* Giant background text */}
           <div
             ref={giantTextRef}
-            className="footer-giant-bg-text absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 whitespace-nowrap z-0 pointer-events-none select-none"
+            className="footer-giant-bg-text absolute bottom-0 left-0 w-full text-center translate-y-1/4 whitespace-nowrap z-0 pointer-events-none select-none"
           >
             STOCKUP
           </div>
@@ -316,11 +316,13 @@ export function CinematicFooter() {
           </div>
 
           {/* 3. Bottom Bar / Credits */}
-          <div className="relative z-20 w-full pb-8 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="relative z-20 w-full pb-8 px-6 md:px-12 flex flex-col md:flex-row items-center gap-6">
             
             {/* Copyright */}
-            <div className="text-text-secondary text-[10px] md:text-xs font-semibold tracking-widest uppercase order-2 md:order-1">
-              © 2026 STOCKUP. All rights reserved.
+            <div className="md:flex-1 text-center md:text-left order-2 md:order-1">
+              <div className="text-text-secondary text-[10px] md:text-xs font-semibold tracking-widest uppercase">
+                © 2026 STOCKUP. All rights reserved.
+              </div>
             </div>
 
             {/* "Crafted" Badge */}
@@ -330,15 +332,17 @@ export function CinematicFooter() {
             </div>
 
             {/* Back to top */}
-            <MagneticButton
-              as="button"
-              onClick={scrollToTop}
-              className="w-12 h-12 rounded-[9px] glass-pill flex items-center justify-center text-text-secondary hover:text-text group order-3"
-            >
-              <svg className="w-5 h-5 transform group-hover:-translate-y-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-              </svg>
-            </MagneticButton>
+            <div className="md:flex-1 flex justify-center md:justify-end order-3">
+              <MagneticButton
+                as="button"
+                onClick={scrollToTop}
+                className="w-12 h-12 rounded-[9px] glass-pill flex items-center justify-center text-text-secondary hover:text-text group"
+              >
+                <svg className="w-5 h-5 transform group-hover:-translate-y-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                </svg>
+              </MagneticButton>
+            </div>
 
           </div>
         </footer>
