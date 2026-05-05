@@ -171,9 +171,9 @@ export default function App() {
         <section id="how-it-works" className="py-12 md:py-32 relative overflow-hidden">
           {/* Giant Background Text Mask */}
            <div 
-             className="absolute bottom-0 left-0 w-full text-center translate-y-1/4 text-[calc(40vw-2px)] md:text-[calc(25vw-2px)] font-black text-white/[0.03] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0"
+             className="absolute bottom-0 left-0 w-full text-center translate-y-1/4 text-[calc(20vw-2px)] md:text-[calc(15vw-2px)] font-black text-white/[0.03] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0"
            >
-             LEAKING
+             CONTROL
            </div>
 
           <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -224,7 +224,7 @@ export default function App() {
                    title: "In-App Buying Network", 
                    desc: "Customers, shops and bulk traders can message your store directly inside the app, place orders and ask about specials.",
                    stat: "Daily deals",
-                   statLabel: "Better baskets",
+                   statLabel: "MORE OFFERS",
                    icon: <img src={communicationGif} className="w-14 h-14 object-cover rounded-xl" alt="In-App Buying Network" />
                  },
                  { 
@@ -298,7 +298,6 @@ export default function App() {
                transition={{ duration: 0.8 }}
                className="text-center mb-16 md:mb-24"
              >
-                <div className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-4">Core Revenue Driver</div>
                 <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-black uppercase italic tracking-tighter text-text leading-none">
                   OWN THE <span className="text-primary">TRADER.</span>
                 </h2>
@@ -420,7 +419,7 @@ export default function App() {
                      transition={{ duration: 0.8 }}
                      className="text-4xl sm:text-5xl md:text-[54px] font-black uppercase italic tracking-tighter text-text leading-[0.85] mb-8"
                    >
-                     BUILT FOR <br />
+                     PERFECT FOR <br />
                      <span className="text-primary">SPAZAS, SALONS & RESELLERS.</span>
                    </motion.h2>
                    <div className="space-y-8">
