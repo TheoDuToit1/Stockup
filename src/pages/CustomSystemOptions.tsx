@@ -49,7 +49,7 @@ export default function CustomSystemOptions({ onContactClick }: CustomSystemOpti
             transition={{ duration: 0.8 }}
             className="text-center space-y-8"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-black uppercase italic tracking-tighter leading-[0.85] text-text">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-black uppercase italic tracking-tighter leading-[0.85] text-text">
               BUILD THE STOCKUP SYSTEM <br />
               <span className="text-primary">YOUR BUSINESS ACTUALLY NEEDS.</span>
             </h1>
