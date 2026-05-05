@@ -40,7 +40,7 @@ export default function StockupGlobeHero({ onContactClick }: { onContactClick: (
             className="max-w-4xl mx-auto"
           >
             <p className="text-xl md:text-2xl text-zinc-400 leading-snug font-medium italic">
-              You have an internal messaging system between stores and members so you have to follow WhatsApps rules. <span className="text-white underline decoration-primary/40 underline-offset-8">STOCKUP</span> turns your order chaos into a professional digital asset. Capture every trader and grow your database with every sale.
+              You have your own internal messaging system between stores and members, so you don't have to follow WhatsApp restrictions. <span className="text-white underline decoration-primary/40 underline-offset-8">STOCKUP</span> turns your order chaos into a professional digital asset. Capture every trader and grow your database with every sale.
             </p>
           </motion.div>
         </motion.div>

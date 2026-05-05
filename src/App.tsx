@@ -180,10 +180,10 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-center mb-16 md:mb-32">
                <div className="lg:col-span-5">
-                  <h2 className="text-4xl md:text-7xl lg:text-[100px] font-black uppercase italic tracking-tighter text-text leading-[0.75]">
+                  <h2 className="text-3xl md:text-6xl lg:text-[94.5px] font-black uppercase italic tracking-tighter text-text leading-[0.75]">
                     FULL <br />
                     CONTROL <br />
-                    <span className="text-primary">ALL IN 1</span> <br />
+                    <span className="text-primary">ALL IN ONE</span> <br />
                     <span className="text-white/20">PLACE.</span>
                   </h2>
                </div>
@@ -200,7 +200,7 @@ export default function App() {
                     Stop Guessing <br />Customer Demand.
                   </p>
                   <p className="text-base md:text-lg text-text-secondary font-medium italic leading-snug">
-                    You have an internal messaging system between stores and members so you have to follow WhatsApps rules.
+                    You have your own internal messaging system between stores and members, so you don't have to follow WhatsApp restrictions.
                   </p>
                </div>
             </div>
@@ -223,7 +223,7 @@ export default function App() {
                {[
                  { 
                    title: "Direct Chat", 
-                   desc: "You have an internal messaging system between stores and members so you have to follow WhatsApps rules. Reduce mistakes and lost revenue.",
+                   desc: "You have your own internal messaging system between stores and members, so you don't have to follow WhatsApp restrictions. Reduce mistakes and lost revenue.",
                    stat: "100%",
                    statLabel: "Control",
                    icon: <img src={communicationGif} className="w-14 h-14 object-cover rounded-xl" alt="Direct Chat" />

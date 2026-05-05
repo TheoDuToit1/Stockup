@@ -110,7 +110,7 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
                       onError={(e) => console.error(`Failed to load card image for ${card.title}:`, e.currentTarget.src)}
                     />
                   )}
-                  {card.img && <div className="absolute inset-0 bg-black/50 z-0 transition-opacity duration-300 group-hover:bg-black/60" />}
+                  {card.img && <div className="absolute inset-0 bg-black/0 z-0 transition-opacity duration-300 group-hover:bg-black/0" />}
                   <span className="relative z-10 text-[11px] md:text-[13px] font-black uppercase tracking-wider text-white text-center leading-tight px-1 drop-shadow-md">{card.title}</span>
                   <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-300 z-20 pointer-events-none" />
                </div>
