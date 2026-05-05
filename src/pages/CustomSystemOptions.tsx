@@ -100,7 +100,7 @@ export default function CustomSystemOptions({ onContactClick }: CustomSystemOpti
             className="text-center mb-12 md:mb-16"
           >
             <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-black uppercase italic tracking-tighter leading-[0.85] text-text mb-6">
-              START WITH THE PARTS <br />
+              START WITH THE FEATURES <br />
               <span className="text-primary">THAT WILL HELP YOU MOST.</span>
             </h2>
             <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto font-medium italic leading-snug">
