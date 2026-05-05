@@ -508,20 +508,21 @@ export default function App() {
         <section className="py-4 md:py-12 text-center relative overflow-hidden bg-bg">
            <div className="max-w-7xl mx-auto px-6 relative z-10">
               <h2 className="text-4xl sm:text-5xl md:text-9xl hero-text mb-12 italic tracking-tighter text-text leading-[0.85]">
-                RECLAIM YOUR <br /><span className="text-primary underline decoration-white/10 underline-offset-[20px]">GROWTH ASSET.</span>
+                <span className="text-text">SMARTER</span> <span className="text-primary">SYSTEM.</span>
               </h2>
+              <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto font-medium italic mb-12">
+                We help you build a custom StockUp setup for your products, buyers, staff flow and collection or delivery process.
+              </p>
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center">
                  <button onClick={openWhatsApp} className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 text-white rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl glass-pill active:scale-95 transition-all duration-300">
-                   Start Pilot 2026
+                   Discuss Your Custom Build
                  </button>
                  <button onClick={openWhatsApp} className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 text-text rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl glass-pill active:scale-95 transition-all duration-300">
-                   Get Pricing
+                   See System Options
                  </button>
               </div>
               <div className="mt-16 flex items-center justify-center gap-8 text-text-secondary text-sm font-black uppercase tracking-widest italic">
-                 <span>Limited pilot slots available</span>
-                 <div className="w-2 h-2 bg-primary rounded-[4px] animate-pulse"></div>
-                 <span>S.A Focus Only</span>
+                 <span>Pilot-first. Built around your business. South Africa only.</span>
               </div>
 
               {/* Scroll Prompt */}

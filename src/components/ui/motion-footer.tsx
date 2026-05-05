@@ -285,7 +285,7 @@ export function CinematicFooter() {
               ref={headingRef}
               className="text-5xl md:text-8xl font-black footer-text-glow tracking-tight mb-12 text-center uppercase italic"
             >
-              MOVE MORE STOCK?
+              READY FOR A<br /><span className="text-primary">SMARTER SYSTEM?</span>
             </h2>
 
             {/* Interactive Magnetic Pills Layout */}
@@ -303,7 +303,7 @@ export function CinematicFooter() {
                 </MagneticButton>
                 
                 <MagneticButton className="glass-pill px-10 py-5 rounded-[9px] text-text font-bold text-sm md:text-base flex items-center gap-3 group">
-                  Custom system options
+                  Custom System Options
                 </MagneticButton>
               </div>
 
