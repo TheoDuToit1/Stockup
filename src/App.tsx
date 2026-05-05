@@ -423,9 +423,6 @@ export default function App() {
                      <span className="text-primary">SPAZAS, SALONS & RESELLERS.</span>
                    </motion.h2>
                    <div className="space-y-8">
-                      <p className="text-2xl text-text-secondary font-medium italic underline decoration-zinc-200 underline-offset-8">
-                        Designed for spazas, salons, resellers, bulk buyers and community traders who need quick deals, simple ordering and direct contact with their wholesaler.
-                      </p>
                       <p className="text-lg text-text-secondary leading-relaxed font-medium italic">
                         StockUp gives your buyers an easier way to see specials, message your store in-app, place repeat orders and arrange collection or delivery. Your team gets a cleaner way to manage the daily rush without relying on scattered chats, paper notes or staff phones.
                       </p>
