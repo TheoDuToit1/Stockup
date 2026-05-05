@@ -230,7 +230,7 @@ export default function App() {
                  },
                  { 
                    title: "Control Your Specials", 
-                   desc: "Change prices, daily deals, bulk offers and upsells whenever you need to, so customers always see the offers you want to push today.",
+                   desc: "Change prices, daily deals, bulk offers and upsells whenever you need to, so customers always see the latest offers.",
                    stat: "Daily deals",
                    statLabel: "Better baskets",
                    icon: <img src={ghostGif} className="w-14 h-14 object-cover rounded-xl" alt="Control Your Specials" />
