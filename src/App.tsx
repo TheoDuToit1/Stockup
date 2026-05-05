@@ -180,7 +180,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-center mb-16 md:mb-32">
                <div className="lg:col-span-5">
-                  <h2 className="text-3xl md:text-6xl lg:text-[94.5px] font-black uppercase italic tracking-tighter text-text leading-[0.75]">
+                  <h2 className="text-[28px] md:text-[80px] lg:text-[90.5px] font-black uppercase italic tracking-tighter text-text leading-[0.75]">
                     FULL <br />
                     CONTROL <br />
                     <span className="text-primary">ALL IN ONE</span> <br />
