@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
   MessageSquare, 
@@ -284,12 +285,12 @@ export default function HomePage({ onContactClick }: HomePageProps) {
                     <p className="text-lg text-text-secondary leading-relaxed font-medium italic">
                       StockUp gives your buyers an easier way to see specials, message your store in-app, place repeat orders and arrange collection or delivery. Your team gets a cleaner way to manage the daily rush without relying on scattered chats, paper notes or staff phones.
                     </p>
-                    <button onClick={onContactClick} className="group flex items-center gap-4 text-text font-black uppercase italic tracking-tighter text-xl outline-none glass-pill px-8 py-4 rounded-[9px]">
+                    <Link to="/custom-system-options" className="group flex items-center gap-4 text-text font-black uppercase italic tracking-tighter text-xl outline-none glass-pill px-8 py-4 rounded-[9px]">
                        See Custom System Options
                        <div className="w-12 h-12 bg-primary rounded-[9px] flex items-center justify-center text-white group-hover:translate-x-2 transition-transform duration-300">
                           <ArrowRight size={24} />
                        </div>
-                    </button>
+                    </Link>
                  </div>
               </div>
            </div>
@@ -376,10 +377,10 @@ export default function HomePage({ onContactClick }: HomePageProps) {
                   <MessageSquare size={32} />
                   WhatsApp Call
                </button>
-               <button onClick={onContactClick} className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 text-text rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl glass-pill active:scale-95 transition-all duration-300 flex items-center gap-4">
+               <Link to="/custom-system-options" className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 text-text rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl glass-pill active:scale-95 transition-all duration-300 flex items-center gap-4">
                   <Smartphone size={32} />
                   Request a Pilot
-               </button>
+               </Link>
             </div>
          </div>
       </section>
