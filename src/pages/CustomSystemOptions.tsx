@@ -104,7 +104,7 @@ export default function CustomSystemOptions({ onContactClick }: CustomSystemOpti
               <span className="text-primary">THAT WILL HELP YOU MOST.</span>
             </h2>
             <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto font-medium italic leading-snug">
-              You do not need a full rebuild from day one. Choose the options that solve your biggest daily problems first, then add more as the system proves itself.
+              Choose the options that will grow your business first, then add more as the system proves itself.
             </p>
           </motion.div>
         </div>
