@@ -302,20 +302,43 @@ export function CinematicFooter() {
                   WhatsApp Call
                 </MagneticButton>
                 
-                <MagneticButton className="glass-pill px-10 py-5 rounded-[9px] text-text font-bold text-sm md:text-base flex items-center gap-3 group">
+                <MagneticButton 
+                  as="a"
+                  href="/custom-system-options"
+                  className="glass-pill px-10 py-5 rounded-[9px] text-text font-bold text-sm md:text-base flex items-center gap-3 group"
+                >
                   Custom System Options
                 </MagneticButton>
               </div>
 
               {/* Secondary Text Links */}
               <div className="flex flex-wrap justify-center gap-3 md:gap-6 w-full mt-2">
+                <MagneticButton 
+                  as="a"
+                  href="/"
+                  className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text"
+                >
+                  Home
+                </MagneticButton>
+                <MagneticButton 
+                  as="a"
+                  href="/custom-system-options"
+                  className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text"
+                >
+                  Custom System Options
+                </MagneticButton>
                 <MagneticButton className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
                   Privacy Policy
                 </MagneticButton>
                 <MagneticButton className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
-                  Terms of Service
+                  Terms
                 </MagneticButton>
-                <MagneticButton className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
+                <MagneticButton 
+                  as="a"
+                  href="https://wa.me/27714329190"
+                  target="_blank"
+                  className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text"
+                >
                   Direct Support
                 </MagneticButton>
               </div>

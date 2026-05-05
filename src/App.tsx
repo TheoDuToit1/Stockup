@@ -514,7 +514,8 @@ export default function App() {
                 We help you build a custom StockUp setup for your products, buyers, staff flow and collection or delivery process.
               </p>
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center">
-                 <button onClick={openWhatsApp} className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 text-white rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl glass-pill active:scale-95 transition-all duration-300">
+                 <button onClick={openWhatsApp} className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 bg-[#25D366] text-white rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:bg-[#20ba59] active:scale-95 transition-all duration-300 flex items-center justify-center gap-3">
+                   <WhatsAppIcon className="w-6 h-6" />
                    Discuss Your Custom Build
                  </button>
                  <button onClick={openWhatsApp} className="w-full md:w-auto h-20 md:h-28 px-10 md:px-16 text-text rounded-[9px] font-black uppercase italic tracking-tighter text-xl md:text-3xl glass-pill active:scale-95 transition-all duration-300">
