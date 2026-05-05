@@ -313,34 +313,6 @@ export function CinematicFooter() {
 
               {/* Secondary Text Links */}
               <div className="flex flex-wrap justify-center gap-3 md:gap-6 w-full mt-2">
-                <MagneticButton 
-                  as="a"
-                  href="/"
-                  className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text"
-                >
-                  Home
-                </MagneticButton>
-                <MagneticButton 
-                  as="a"
-                  href="/custom-system-options"
-                  className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text"
-                >
-                  Custom System Options
-                </MagneticButton>
-                <MagneticButton className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
-                  Privacy Policy
-                </MagneticButton>
-                <MagneticButton className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text">
-                  Terms
-                </MagneticButton>
-                <MagneticButton 
-                  as="a"
-                  href="https://wa.me/27714329190"
-                  target="_blank"
-                  className="glass-pill px-6 py-3 rounded-[9px] text-text-secondary font-medium text-xs md:text-sm hover:text-text"
-                >
-                  Direct Support
-                </MagneticButton>
               </div>
             </div>
           </div>
