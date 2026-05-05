@@ -475,10 +475,10 @@ export default function App() {
                 className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
               >
                  {[
-                   { t: "Wholesalers", d: "Turn offline demand into digital growth.", i: <img src={layersGif} className="w-16 h-16 rounded-md" alt="layers" /> },
-                   { t: "Cash & Carry", d: "Manage walk-ins and phone orders centrally.", i: <img src={communicationGif} className="w-16 h-16 rounded-md" alt="comm" /> },
-                   { t: "Bulk Suppliers", d: "Efficient ordering for regular traders.", i: <img src={processingSpeedGif} className="w-16 h-16 rounded-md" alt="speed" /> },
-                   { t: "Distributors", d: "Track areas, suburbs, and purchase patterns.", i: <img src={engagementGif} className="w-16 h-16 rounded-md" alt="engagement" /> }
+                   { t: "Wholesalers", d: "Put your daily specials, repeat products and customer orders into one cleaner system.", i: <img src={layersGif} className="w-16 h-16 rounded-md" alt="layers" /> },
+                   { t: "Cash & Carry", d: "Help walk-ins, phone buyers and regular traders order faster and come back easier.", i: <img src={communicationGif} className="w-16 h-16 rounded-md" alt="comm" /> },
+                   { t: "Bulk Suppliers", d: "Give shops, salons, caterers and resellers a simple way to buy more often.", i: <img src={processingSpeedGif} className="w-16 h-16 rounded-md" alt="speed" /> },
+                   { t: "Distributors", d: "See which customers, areas and product groups are driving demand.", i: <img src={engagementGif} className="w-16 h-16 rounded-md" alt="engagement" /> }
                  ].map((ind, i) => (
                    <motion.div 
                      key={i} 
@@ -505,7 +505,7 @@ export default function App() {
         </section>
 
         {/* Final CTA Overlay */}
-        <section className="py-32 md:py-64 text-center relative overflow-hidden bg-bg">
+        <section className="py-4 md:py-12 text-center relative overflow-hidden bg-bg">
            <div className="max-w-7xl mx-auto px-6 relative z-10">
               <h2 className="text-4xl sm:text-5xl md:text-9xl hero-text mb-12 italic tracking-tighter text-text leading-[0.85]">
                 RECLAIM YOUR <br /><span className="text-primary underline decoration-white/10 underline-offset-[20px]">GROWTH ASSET.</span>
@@ -541,7 +541,7 @@ export default function App() {
                 </motion.div>
               </motion.div>
            </div>
-           <div className="absolute bottom-0 left-0 w-full text-center translate-y-1/4 text-[calc(25vw-2px)] font-black text-white/[0.03] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap">
+           <div className="absolute bottom-0 left-0 w-full text-center translate-y-1/4 text-[calc(12vw-2px)] font-black text-white/[0.03] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap">
              STOCKUP
            </div>
         </section>
