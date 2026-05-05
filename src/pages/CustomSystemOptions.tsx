@@ -310,7 +310,7 @@ export default function CustomSystemOptions({ onContactClick }: CustomSystemOpti
             transition={{ duration: 0.8 }}
             className="text-center mb-16 md:mb-24"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase italic tracking-tighter leading-[0.85] text-text mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-black uppercase italic tracking-tighter leading-[0.85] text-text mb-6">
               THREE SIMPLE <span className="text-primary">WAYS TO START.</span>
             </h2>
           </motion.div>
