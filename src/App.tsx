@@ -453,10 +453,10 @@ export default function App() {
                 className="text-center mb-16 md:mb-32"
               >
                  <h2 className="text-4xl sm:text-5xl md:text-8xl lg:text-[140px] font-black uppercase italic tracking-tighter leading-[0.8] mb-8">
-                   SCALE YOUR <br />
-                   <span className="text-primary italic">CHANNEL.</span>
+                   <span className="text-text">GROW YOUR</span> <br />
+                   <span className="text-primary italic">BUYING NETWORK</span>
                  </h2>
-                 <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto font-medium italic">Whether you are a wholesaler, cash-and-carry, or bulk distributor—we provide the engine for growth.</p>
+                 <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto font-medium italic">Give spazas, salons, resellers, traders and regular buyers a simpler way to see deals, order again and stay connected to your store.</p>
               </motion.div>
 
               <motion.div 
