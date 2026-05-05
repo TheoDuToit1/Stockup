@@ -180,11 +180,11 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-center mb-16 md:mb-32">
                <div className="lg:col-span-5">
-                  <h2 className="text-[28px] md:text-[80px] lg:text-[90.5px] font-black uppercase italic tracking-tighter text-text leading-[0.75]">
-                    FULL <br />
-                    CONTROL <br />
-                    <span className="text-primary">ALL IN ONE</span> <br />
-                    <span className="text-white/20">PLACE.</span>
+                  <h2 className="text-[8px] md:text-[60px] lg:text-[70.5px] font-black uppercase italic tracking-tighter text-text leading-[0.75]">
+                    KEEP YOUR <br />
+                    ORDERS AND <br />
+                    <span className="text-green-500">CUSTOMERS</span> <br />
+                    <span className="text-blue-500 text-[3px] md:text-[55px] lg:text-[65.5px]">IN ONE PLACE.</span>
                   </h2>
                </div>
 
@@ -222,25 +222,25 @@ export default function App() {
             >
                {[
                  { 
-                   title: "Direct Chat", 
-                   desc: "You have your own internal messaging system between stores and members, so you don't have to follow WhatsApp restrictions. Reduce mistakes and lost revenue.",
-                   stat: "100%",
-                   statLabel: "Control",
-                   icon: <img src={communicationGif} className="w-14 h-14 object-cover rounded-xl" alt="Direct Chat" />
+                   title: "Direct Orders", 
+                   desc: "Bring WhatsApp, phone, walk-in and online orders into one cleaner flow, so fewer orders get missed.",
+                   stat: "Daily deals",
+                   statLabel: "Better baskets",
+                   icon: <img src={communicationGif} className="w-14 h-14 object-cover rounded-xl" alt="Direct Orders" />
                  },
                  { 
-                   title: "Ghost Users", 
-                   desc: "Convert anonymous transactions into real customer data. Capture names, numbers, and suburbs to build a valuable repeat-buying database.",
-                   stat: "100%",
-                   statLabel: "Ownership",
-                   icon: <img src={ghostGif} className="w-14 h-14 object-cover rounded-xl" alt="Ghost Users" />
+                   title: "Control Your Specials", 
+                   desc: "Change prices, daily deals, bulk offers and upsells whenever you need to, so customers always see the offers you want to push today.",
+                   stat: "Daily deals",
+                   statLabel: "Better baskets",
+                   icon: <img src={ghostGif} className="w-14 h-14 object-cover rounded-xl" alt="Control Your Specials" />
                  },
                  { 
-                   title: "Staff Lag", 
-                   desc: "Clear workflows for packing, collection, and delivery eliminate internal confusion. Professionalize every step from basket to completion.",
-                   stat: "5 Sec",
-                   statLabel: "Capture",
-                   icon: <img src={processingSpeedGif} className="w-14 h-14 object-cover rounded-xl" alt="Staff Lag" />
+                   title: "Clear Staff Roles", 
+                   desc: "Know who received the order, who checked payment, who packed it, and who updated the customer.",
+                   stat: "Clear steps",
+                   statLabel: "Less confusion",
+                   icon: <img src={processingSpeedGif} className="w-14 h-14 object-cover rounded-xl" alt="Clear Staff Roles" />
                  }
                ].map((item, i) => (
                  <motion.div 
@@ -256,7 +256,7 @@ export default function App() {
                        <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-text-secondary group-hover:text-primary group-hover:border-primary/20 transition-all duration-500">
                           {item.icon}
                        </div>
-                       <span className="text-6xl font-black italic text-white/[0.02] group-hover:text-primary/5 transition-colors">0{i + 1}</span>
+                       <span className="text-6xl font-black italic text-white/[0.3] group-hover:text-primary/5 transition-colors">0{i + 1}</span>
                     </div>
 
                     <div className="flex-1">
