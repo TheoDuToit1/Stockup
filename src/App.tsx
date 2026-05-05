@@ -31,7 +31,6 @@ import {
 import StockHero from './components/StockHero';
 import { GlobeLive } from './components/ui/cobe-globe-live';
 import { CinematicFooter } from './components/ui/motion-footer';
-import StockMetricChart from "./components/StockMetricChart";
 import { WhatsAppIcon } from "./components/ui/WhatsAppIcon";
 import { communicationGif, engagementGif, ghostGif, layersGif, processingSpeedGif, secureGif } from './assets/gifs';
 
@@ -282,24 +281,6 @@ export default function App() {
            </div>
         </section>
 
-        {/* Section: The Stockup Conversion (The Order) */}
-        <section className="py-24 md:py-48 bg-zinc-900 rounded-[32px] md:rounded-[64px] mx-4 relative overflow-hidden group">
-           {/* Grid Pattern */}
-           <div className="absolute inset-0 z-0 opacity-10 pointer-events-none" 
-                style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
-           
-           {/* Giant Background Text Mask */}
-           <div 
-             className="absolute bottom-0 left-0 w-full text-center translate-y-1/4 text-[calc(40vw-2px)] md:text-[calc(25vw-2px)] font-black text-white/[0.05] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0"
-           >
-             SCALING
-           </div>
-
-           <div className="max-w-7xl mx-auto px-6 relative z-10">
-              <StockMetricChart />
-           </div>
-        </section>
-
         {/* Section: The Database Vault */}
         <section className="py-24 md:py-48 bg-card border-y border-white/5 relative overflow-hidden">
           {/* Large Back Decor */}
@@ -372,7 +353,7 @@ export default function App() {
                    <div className="text-[10px] font-black uppercase tracking-widest text-text-secondary">Order Speed</div>
                 </div>
                 <div className="text-center">
-                   <div className="text-4xl md:text-6xl font-black text-text mb-2 italic">14m</div>
+                   <div className="text-4xl md:text-6xl font-black text-text mb-2 italic">30 DAYS</div>
                    <div className="text-[10px] font-black uppercase tracking-widest text-text-secondary">Setup to Live</div>
                 </div>
                 <div className="text-center">
@@ -402,31 +383,31 @@ export default function App() {
                  >
                    <div className="grid grid-cols-2 gap-4">
                       <div className="aspect-square bg-card border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:border-white/10 transition-all duration-500">
-                         <img src={communicationGif} className="w-20 h-20 object-cover rounded-lg" alt="communication" />
+                         <img src={communicationGif} className="w-20 h-20 object-cover rounded-lg" alt="In-App Messaging" />
                          <div>
-                            <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">Direct Chat</div>
-                            <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">Internal member messaging</div>
+                            <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">In-App Messaging</div>
+                            <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">Direct buyer-to-store chats</div>
                          </div>
                       </div>
                       <div className="aspect-square bg-card border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:border-white/10 transition-all duration-500">
-                         <img src={processingSpeedGif} className="w-20 h-20 object-cover rounded-lg" alt="processing" />
+                         <img src={processingSpeedGif} className="w-20 h-20 object-cover rounded-lg" alt="Daily Specials" />
                          <div>
-                            <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">DATA SAVVY</div>
-                            <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">&lt; 2MB per basket</div>
+                            <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">Daily Specials</div>
+                            <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">Push deals and upsells anytime</div>
                          </div>
                       </div>
                       <div className="aspect-square bg-card border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:border-white/10 transition-all duration-500">
-                         <img src={engagementGif} className="w-20 h-20 object-cover rounded-lg" alt="engagement" />
+                         <img src={engagementGif} className="w-20 h-20 object-cover rounded-lg" alt="Mobile Friendly" />
                          <div>
-                            <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">Mobile Optimized</div>
-                            <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">EFT & Cash focus</div>
+                            <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">Mobile Friendly</div>
+                            <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">Easy ordering on any phone</div>
                          </div>
                       </div>
                       <div className="aspect-square bg-card border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:border-white/10 transition-all duration-500">
-                         <img src={layersGif} className="w-20 h-20 object-cover rounded-lg" alt="layers" />
+                         <img src={layersGif} className="w-20 h-20 object-cover rounded-lg" alt="Collection Ready" />
                          <div>
-                            <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">Collection</div>
-                            <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">Flexible logistics models</div>
+                            <div className="text-lg md:text-xl font-black uppercase italic leading-none mb-1">Collection Ready</div>
+                            <div className="text-[9px] md:text-xs text-text-secondary font-black uppercase tracking-tighter">Built for pickup and local delivery</div>
                          </div>
                       </div>
                    </div>
@@ -437,20 +418,20 @@ export default function App() {
                      whileInView={{ opacity: 1, x: 0 }}
                      viewport={{ once: true }}
                      transition={{ duration: 0.8 }}
-                     className="text-4xl sm:text-5xl md:text-8xl font-black uppercase italic tracking-tighter text-text leading-[0.85] mb-8"
+                     className="text-4xl sm:text-5xl md:text-[54px] font-black uppercase italic tracking-tighter text-text leading-[0.85] mb-8"
                    >
                      BUILT FOR <br />
-                     <span className="text-primary">SOUTH AFRICA.</span>
+                     <span className="text-primary">SPAZAS, SALONS & RESELLERS.</span>
                    </motion.h2>
                    <div className="space-y-8">
                       <p className="text-2xl text-text-secondary font-medium italic underline decoration-zinc-200 underline-offset-8">
-                        Designed for spaza, salon, reseller, and community trade networks.
+                        Designed for spazas, salons, resellers, bulk buyers and community traders who need quick deals, simple ordering and direct contact with their wholesaler.
                       </p>
                       <p className="text-lg text-text-secondary leading-relaxed font-medium italic">
-                        We don't build "tech startup" apps. We build practical tools that respect real South African market realities—from data-sensitive users to cash-on-collection preferences. StockUp is built for the ground.
+                        StockUp gives your buyers an easier way to see specials, message your store in-app, place repeat orders and arrange collection or delivery. Your team gets a cleaner way to manage the daily rush without relying on scattered chats, paper notes or staff phones.
                       </p>
                       <button onClick={openWhatsApp} className="group flex items-center gap-4 text-text font-black uppercase italic tracking-tighter text-xl outline-none glass-pill px-8 py-4 rounded-[9px]">
-                         Explore the pilot program 
+                         See Custom System Options
                          <div className="w-12 h-12 bg-primary rounded-[9px] flex items-center justify-center text-white group-hover:translate-x-2 transition-transform duration-300">
                             <ArrowRight size={24} />
                          </div>
