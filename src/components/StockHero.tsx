@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { ArrowRight, Package, Database } from "lucide-react";
 import { WhatsAppIcon } from "./ui/WhatsAppIcon";
 
@@ -74,12 +75,12 @@ export default function StockHero({ onContactClick }: StockHeroProps) {
               <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
             </button>
             
-            <button
-              onClick={onContactClick}
+            <Link
+              to="/custom-system-options"
               className="group relative inline-flex items-center gap-5 px-10 py-5 text-text rounded-[9px] font-black text-lg uppercase italic tracking-tighter glass-pill active:scale-95 transition-all duration-300"
             >
               <span className="relative z-10">Custom system Options</span>
-            </button>
+            </Link>
           </motion.div>
         </motion.div>
 
