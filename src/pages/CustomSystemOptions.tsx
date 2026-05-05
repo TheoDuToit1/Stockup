@@ -414,7 +414,7 @@ export default function CustomSystemOptions({ onContactClick }: CustomSystemOpti
       </section>
 
       {/* Section 5: How We Decide */}
-      <section className="py-12 md:py-24 relative overflow-hidden">
+      <section className="py-0 md:py-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
