@@ -84,7 +84,7 @@ export default function CustomSystemOptions({ onContactClick }: CustomSystemOpti
       </section>
 
       {/* Section 1: Choose What You Need First */}
-      <section className="py-12 md:py-24 relative overflow-hidden">
+      <section className="py-8 md:py-16 relative overflow-hidden">
         <div 
           className="absolute top-0 left-0 w-full text-center -translate-y-1/4 text-[calc(25vw)] font-black text-white/[0.03] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0"
         >
@@ -97,9 +97,9 @@ export default function CustomSystemOptions({ onContactClick }: CustomSystemOpti
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16 md:mb-24"
+            className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase italic tracking-tighter leading-[0.85] text-text mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-black uppercase italic tracking-tighter leading-[0.85] text-text mb-6">
               START WITH THE PARTS <br />
               <span className="text-primary">THAT WILL HELP YOU MOST.</span>
             </h2>
@@ -219,7 +219,7 @@ export default function CustomSystemOptions({ onContactClick }: CustomSystemOpti
       </section>
 
       {/* Section 3: AI Support Options */}
-      <section className="py-12 md:py-24 relative overflow-hidden">
+      <section className="py-8 md:py-16 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
