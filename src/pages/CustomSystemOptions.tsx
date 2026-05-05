@@ -34,7 +34,7 @@ export default function CustomSystemOptions({ onContactClick }: CustomSystemOpti
   return (
     <div className="min-h-screen bg-bg text-text">
       {/* Hero Section */}
-      <section className="relative pt-48 pb-24 overflow-hidden">
+      <section className="relative pt-24 pb-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-bg via-card to-bg z-0" />
         <div 
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[calc(30vw)] font-black text-white/[0.02] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0"
@@ -84,7 +84,7 @@ export default function CustomSystemOptions({ onContactClick }: CustomSystemOpti
       </section>
 
       {/* Section 1: Choose What You Need First */}
-      <section className="py-8 md:py-16 relative overflow-hidden">
+      <section className="py-0 md:py-0 relative overflow-hidden">
         <div 
           className="absolute top-0 left-0 w-full text-center -translate-y-1/4 text-[calc(25vw)] font-black text-white/[0.03] italic select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0"
         >
