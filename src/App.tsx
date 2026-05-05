@@ -223,7 +223,7 @@ export default function App() {
                {[
                  { 
                    title: "In-App Buying Network", 
-                   desc: "Customers, shops and bulk traders can message your store directly inside the app, place orders, ask about specials and keep coming back through your own buying network.",
+                   desc: "Customers, shops and bulk traders can message your store directly inside the app, place orders and ask about specials.",
                    stat: "Daily deals",
                    statLabel: "Better baskets",
                    icon: <img src={communicationGif} className="w-14 h-14 object-cover rounded-xl" alt="In-App Buying Network" />
