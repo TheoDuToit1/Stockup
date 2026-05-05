@@ -482,7 +482,7 @@ export default function CustomSystemOptions({ onContactClick }: CustomSystemOpti
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black uppercase italic tracking-tighter leading-[0.85] text-text mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-black uppercase italic tracking-tighter leading-[0.85] text-text mb-6">
               START SMALL. PROVE IT. <br />
               <span className="text-primary">THEN BUILD MORE.</span>
             </h2>
@@ -537,7 +537,7 @@ export default function CustomSystemOptions({ onContactClick }: CustomSystemOpti
       </section>
 
       {/* Section 7: Final CTA */}
-      <section className="py-12 md:py-32 relative overflow-hidden">
+      <section className="py-0 md:py-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
