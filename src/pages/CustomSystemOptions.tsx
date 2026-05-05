@@ -503,19 +503,7 @@ export default function CustomSystemOptions({ onContactClick }: CustomSystemOpti
                 Pilot can include:
               </h3>
               
-              <motion.div
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                variants={{
-                  hidden: { opacity: 0 },
-                  show: {
-                    opacity: 1,
-                    transition: { staggerChildren: 0.08 }
-                  }
-                }}
-                className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
-              >
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
                 {[
                   "30 to 50 products",
                   "Selected specials",
@@ -527,24 +515,15 @@ export default function CustomSystemOptions({ onContactClick }: CustomSystemOpti
                   "Packing slips",
                   "Collection process",
                   "Basic customer database",
-                  "Simple dashboard"
+                  "Simple dashboard",
+                  "Basic reporting"
                 ].map((item, i) => (
-                  <motion.div
-                    key={i}
-                    variants={{
-                      hidden: { opacity: 0, y: 20 },
-                      show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-                    }}
-                    whileHover={{ y: -8 }}
-                    className="group p-6 bg-white/[0.02] border border-white/5 rounded-[20px] transition-all duration-500 hover:bg-white/[0.04] hover:border-primary/30"
-                  >
-                    <div className="w-12 h-12 bg-primary/10 border border-primary/20 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <CheckCircle className="w-6 h-6" />
-                    </div>
-                    <p className="text-text font-medium italic text-base">{item}</p>
-                  </motion.div>
+                  <div key={i} className="flex items-center gap-3 text-text font-medium italic">
+                    <div className="w-2 h-2 bg-primary rounded-full" />
+                    <span>{item}</span>
+                  </div>
                 ))}
-              </motion.div>
+              </div>
 
               <button
                 onClick={onContactClick}
